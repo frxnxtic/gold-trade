@@ -11,7 +11,7 @@ export default function HeroSection() {
       {/* Image */}
       <div className="mt-6 md:mt-0 md:ml-10 rounded-xl overflow-hidden w-full md:w-[400px]">
         <img
-          src="/hero-building.jpg"
+          src="/header.jpg"
           alt="Budova"
           className="w-full h-auto object-cover"
         />
