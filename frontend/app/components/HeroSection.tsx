@@ -1,20 +1,23 @@
 // components/HeroSection.tsx
 export default function HeroSection() {
   return (
-    <section className="bg-[#2E2E2E] text-white py-10 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
-      {/* Text */}
-      <div className="max-w-lg">
-        <h1 className="text-4xl font-bold mb-2">Predaj bytov</h1>
-        <p className="text-lg text-gray-300">MODERNÉ BÝVANIE V CENTRE MESTA</p>
+    <section className="relative bg-[#1E1E1E] text-white py-12 px-6 md:px-16 overflow-hidden">
+      {/* Logo - Gold Trade */}
+      <div className="absolute top-6 right-6 border border-[#D4AF37] text-[#D4AF37] px-4 py-2 rounded-full text-sm font-semibold">
+        GOLD<br />TRADE
       </div>
 
-      {/* Image */}
-      <div className="mt-6 md:mt-0 md:ml-10 rounded-xl overflow-hidden w-full md:w-[400px]">
-        <img
-          src="/header.jpg"
-          alt="Budova"
-          className="w-full h-auto object-cover"
-        />
+      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+        {/* Text block */}
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Predaj bytov</h1>
+          <p className="text-lg text-gray-300">MODERNÉ BÝVANIE V CENTRE MESTA</p>
+        </div>
+
+        {/* Image */}
+        <div className="rounded-tl-[60px] overflow-hidden max-w-[420px] w-full">
+          <img src="/header.jpg" alt="Budova" className="w-full h-auto object-cover" />
+        </div>
       </div>
     </section>
   );
