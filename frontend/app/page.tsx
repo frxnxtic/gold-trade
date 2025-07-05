@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import FlatCard from "@/components/FlatCard";
 import ContactForm from "@/components/ContactForm";
 
