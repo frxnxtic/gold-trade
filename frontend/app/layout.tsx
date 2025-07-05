@@ -13,8 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gold Trade s.r.o.",
-  description: "Realitna kancelaria",
+  title: 'Predaj bytov | GOLD TRADE',
+  description: 'Moderné bývanie v centre mesta. Katalóg bytov s výhodnými cenami a detailnými informáciami.',
+  keywords: ['predaj bytov', 'novostavba', 'realitná kancelária', 'moderné bývanie'],
+  openGraph: {
+    title: 'Predaj bytov | GOLD TRADE',
+    description: 'Moderné bývanie v centre mesta.',
+    url: 'https://gold-trade.eu',
+  },
 };
 
 export default function RootLayout({
