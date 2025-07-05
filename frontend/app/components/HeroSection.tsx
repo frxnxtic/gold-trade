@@ -2,7 +2,7 @@ export default function HeroSection() {
   return (
     <section className="relative bg-[#1E1E1E] text-white py-12 px-6 md:px-16 overflow-hidden">
       {/* Absolute positioned Logo */}
-      <div className="absolute top-6 left-8 z-10 border border-[#D4AF37] text-[#D4AF37] px-4 py-2 rounded-full text-sm font-semibold text-center leading-tight">
+      <div className="absolute top-6 left-10 z-10 border border-[#D4AF37] text-[#D4AF37] px-4 py-2 rounded-full text-sm font-semibold text-center leading-tight">
         GOLD<br />TRADE
       </div>
 
