@@ -1,3 +1,12 @@
+type FlatCardProps = {
+    flat: {
+        id: number;
+        address: string;
+        price: number;
+        // Добавьте другие поля, если они появятся в API
+    };
+};
+
 export default function FlatCard({ flat }: FlatCardProps) {
     return (
         <div className="bg-white shadow p-4 rounded border text-black">
