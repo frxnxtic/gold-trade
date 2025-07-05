@@ -2,7 +2,7 @@ import FlatCard from "@/components/FlatCard";
 import ContactForm from "@/components/ContactForm";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:3000/api/izba?id=all", { cache: "no-store" });
+  const res = await fetch("https://gold-trade-be/api/izba?id=all", { cache: "no-store" });
   const flats = await res.json();
 
   return (
