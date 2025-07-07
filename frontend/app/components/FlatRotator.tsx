@@ -7,6 +7,9 @@ type Flat = {
   id: number;
   address: string;
   price: number;
+  floor?: number;  // 👈 добавить
+  rooms?: number;
+  size?: number;
 };
 
 export default function FlatRotator({ flats }: { flats: Flat[] }) {
