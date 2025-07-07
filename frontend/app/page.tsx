@@ -2,6 +2,7 @@
 import FlatCard from "@/components/FlatCard";
 import ContactForm from "@/components/ContactForm";
 import HeroSection from "@/components/HeroSection";
+import FlatRotator from "@/components/FlatRotator";
 
 export default async function Home() {
   const res = await fetch("https://gold-trade-be.vercel.app/api/izba?id=all", { cache: "no-store" });
@@ -14,11 +15,7 @@ export default async function Home() {
 
       <section className="bg-white text-black p-6">
         <h2 className="text-2xl font-semibold mb-4">Katalóg bytov</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          {flats.map((flat: any) => (
-            <FlatCard key={flat.id} flat={flat} />
-          ))}
-        </div>
+        <FlatRotator flats={flats} />
       </section>
 
       <section className="bg-[#2E2E2E] p-6">
