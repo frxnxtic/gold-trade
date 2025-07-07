@@ -1,4 +1,18 @@
 [
-  { "id": 1, "address": "Улица 1", "price": 100000 },
-  { "id": 2, "address": "Улица 2", "price": 120000 }
+  {
+    "id": 1,
+    "address": "Ulica 1",
+    "price": 100000,
+    "floor": 3,
+    "rooms": 2,
+    "size": 65
+  },
+  {
+    "id": 2,
+    "address": "Ulica 2",
+    "price": 120000,
+    "floor": 2,
+    "rooms": 3,
+    "size": 80
+  }
 ]
