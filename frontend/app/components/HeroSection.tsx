@@ -10,7 +10,17 @@ export default function HeroSection() {
         {/* Text block */}
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Predaj bytov</h1>
-          <p className="text-lg text-gray-300">MODERNÉ BÝVANIE V CENTRE MESTA</p>
+          <p className="text-lg text-gray-300 mb-6">
+            MODERNÉ BÝVANIE V CENTRE MESTA
+          </p>
+
+          {/* 🔽 Anchor Button */}
+          <a
+            href="#katalog"
+            className="inline-block bg-[#D4AF37] text-black font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-400 transition duration-300"
+          >
+            Poďme na to
+          </a>
         </div>
 
         {/* Image block */}

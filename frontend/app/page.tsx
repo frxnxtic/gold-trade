@@ -1,27 +1,54 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import FlatCard from "@/components/FlatCard";
 import ContactForm from "@/components/ContactForm";
 import HeroSection from "@/components/HeroSection";
-import FlatRotator from "@/components/FlatRotator";
+import FloorMap from "@/components/FloorMap";
 
-export default async function Home() {
-  const res = await fetch("https://gold-trade-be.vercel.app/api/izba?id=all", { cache: "no-store" });
-  const flats = await res.json();
-  
+export default async function Home() { 
 
   return (
     <main className="bg-[#2E2E2E] text-white min-h-screen">
       <HeroSection />
 
-      <section className="bg-white text-black p-6">
-        <h2 className="text-2xl font-semibold mb-4">Katalóg bytov</h2>
-        <FlatRotator flats={flats} />
+      {/* Sekcia: Prečo si vybrať nás */}
+      <section className="bg-[#1E1E1E] text-white px-6 md:px-16 py-16">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Prečo si vybrať nás</h2>
+        <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-semibold text-[#D4AF37] mb-2">Skvelá lokalita</h3>
+            <p className="text-gray-300">Moderné bývanie priamo v srdci mesta, s kompletnou občianskou vybavenosťou.</p>
+          </div>
+          <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-semibold text-[#D4AF37] mb-2">Kvalitná výstavba</h3>
+            <p className="text-gray-300">Používame len kvalitné materiály a moderné technológie, aby ste mali istotu do budúcna.</p>
+          </div>
+          <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-semibold text-[#D4AF37] mb-2">Osobný prístup</h3>
+            <p className="text-gray-300">Záleží nám na spokojnosti klientov – pomôžeme vám s celým procesom kúpy.</p>
+          </div>
+        </div>
       </section>
 
+      {/* ✅ Sekcia: Katalóg bytov */}
+      <section id="katalog" className="bg-white text-black p-6">
+        <h2 className="text-2xl font-semibold mb-4">Katalóg bytov</h2>
+        <FloorMap />
+      </section>
+
+      {/* Sekcia: Kontakt */}
       <section className="bg-[#2E2E2E] p-6">
         <h2 className="text-2xl font-semibold mb-4">Kontaktujte nás</h2>
         <ContactForm />
       </section>
+      <footer className="bg-[#1E1E1E] text-white px-6 md:px-16 py-8 mt-12">
+      <div className="flex flex-col md:flex-row justify-between items-center text-sm gap-4">
+        <div className="text-[#D4AF37] font-semibold">GOLD TRADE</div>
+        <div className="text-gray-400">© {new Date().getFullYear()} Všetky práva vyhradené</div>
+        <div className="flex gap-4">
+          <a href="#katalog" className="hover:text-[#D4AF37] transition">Katalóg</a>
+          <a href="#kontakt" className="hover:text-[#D4AF37] transition">Kontakt</a>
+        </div>
+      </div>
+    </footer>
     </main>
   );
 }
