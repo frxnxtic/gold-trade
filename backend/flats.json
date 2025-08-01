@@ -1,134 +1,185 @@
 [
   {
     "id": 101,
-    "nazov": "Byt 101",
-    "adresa": "Ulica 1",
-    "cena": "185000 €",
+    "nazov": "Byt A1",
+    "adresa": "1. NP",
+    "cena": "213983.10 €",
     "poschodie": 1,
-    "izby": 3,
-    "rozloha": "82",
-    "status": "predane",
-    "images": ["/images/flats/101-1.jpg", "/images/flats/101-2.jpg", "/images/flats/101-3.jpg"],
-    "popis": ["Slnečný byt", "Blízkosť centra", "Tichá lokalita"]
+    "izby": 2,
+    "rozloha": "51.34",
+    "status": "volne",
+    "images": [
+      "/images/flats/101-1.jpg",
+      "/images/flats/101-2.jpg",
+      "/images/flats/101-3.jpg"
+    ],
+    "popis": [
+      "Chodba 3.26 m2",
+      "Obývacia izba s kuchyňou 24.66 m2",
+      "Izba 17.93 m2",
+      "Kúpeľňa s WC 5.49 m2"
+    ]
   },
   {
     "id": 102,
-    "nazov": "Byt 102",
-    "adresa": "Ulica 2",
-    "cena": "145000 €",
+    "nazov": "Byt A2",
+    "adresa": "1. NP",
+    "cena": "369782.28 €",
     "poschodie": 1,
-    "izby": 2,
-    "rozloha": "60",
+    "izby": 3,
+    "rozloha": "88.35",
     "status": "volne",
-    "images": ["/images/flats/102-1.jpg", "/images/flats/102-2.jpg", "/images/flats/102-3.jpg"],
-    "popis": ["Výborná dostupnosť", "Zrekonštruovaná kúpeľňa", "Samostatná kuchyňa"]
+    "images": [
+      "/images/flats/102-1.jpg",
+      "/images/flats/102-2.jpg"
+    ],
+    "popis": [
+      "Chodba 14.41 m2",
+      "Komora 3.4 m2",
+      "Kúpeľňa 6.3 m2",
+      "WC 1.75 m2",
+      "Izba 13.7 m2",
+      "Izba 13.17 m2",
+      "Obývacia izba s kuchyňou 35.62 m2"
+    ]
   },
   {
     "id": 103,
-    "nazov": "Byt 103",
-    "adresa": "Ulica 3",
-    "cena": "225000 €",
-    "poschodie": 1,
+    "nazov": "Byt A3",
+    "adresa": "2. NP",
+    "cena": "288244.35 €",
+    "poschodie": 2,
+    "izby": 2,
+    "rozloha": "69.44",
+    "status": "volne",
+    "images": [
+      "/images/flats/103-1.jpg",
+      "/images/flats/103-2.jpg"
+    ],
+    "popis": [
+      "Chodba 5.26 m2",
+      "Kúpeľňa s WC 5.59 m2",
+      "Obývacia izba s kuchyňou 43.77 m2",
+      "Izba 14.82 m2"
+    ]
+  },
+  {
+    "id": 104,
+    "nazov": "Byt B4",
+    "adresa": "2. NP",
+    "cena": "239506.83 €",
+    "poschodie": 2,
+    "izby": 2,
+    "rozloha": "52.26",
+    "status": "volne",
+    "images": [
+      "/images/flats/104-1.jpg",
+      "/images/flats/104-2.jpg"
+    ],
+    "popis": [
+      "Chodba 3.61 m2",
+      "Kúpeľňa s WC 5.49 m2",
+      "Obývacia izba s kuchyňou 24.86 m2",
+      "Izba 18.26 m2"
+    ]
+  },
+  {
+    "id": 105,
+    "nazov": "Byt B5",
+    "adresa": "2. NP",
+    "cena": "397519.3 €",
+    "poschodie": 2,
     "izby": 4,
-    "rozloha": "105",
-    "status": "predane",
-    "images": ["/images/flats/103-1.jpg", "/images/flats/103-2.jpg"],
-    "popis": ["Priestranný 4-izbový byt", "Balkón s výhľadom", "Nízke mesačné náklady"]
+    "rozloha": "84.13",
+    "status": "volne",
+    "images": [
+      "/images/flats/105-1.jpg"
+    ],
+    "popis": [
+      "Chodba 15.73 m2",
+      "WC 1.45 m2",
+      "Kúpeľňa 3.64 m2",
+      "Obývacia izba s kuchyňou 38.85 m2",
+      "Izba 24.46 m2"
+    ]
   },
   {
-    "id": 201,
-    "nazov": "Byt 201",
-    "adresa": "Ulica 4",
-    "cena": "190000 €",
-    "poschodie": 2,
-    "izby": 3,
-    "rozloha": "85",
-    "status": "predane",
-    "images": ["/images/flats/201-1.jpg", "/images/flats/201-2.jpg"],
-    "popis": ["Moderný interiér", "Parkovanie pri dome", "Blízkosť škôlky"]
-  },
-  {
-    "id": 202,
-    "nazov": "Byt 202",
-    "adresa": "Ulica 5",
-    "cena": "155000 €",
+    "id": 106,
+    "nazov": "Byt B6",
+    "adresa": "2. NP",
+    "cena": "218060.23 €",
     "poschodie": 2,
     "izby": 2,
-    "rozloha": "62",
-    "status": "predane",
-    "images": ["/images/flats/202-1.jpg", "/images/flats/202-2.jpg", "/images/flats/202-3.jpg"],
-    "popis": ["Kompletne zariadený", "Tiché prostredie", "Dobrá občianska vybavenosť"]
+    "rozloha": "58.88",
+    "status": "volne",
+    "images": [
+      "/images/flats/106-1.jpg"
+    ],
+    "popis": [
+      "Chodba 5.88 m2",
+      "Kúpeľňa s WC 13.01 m2",
+      "Obývacia izba s kuchyňou 45.78 m2"
+    ]
   },
   {
-    "id": 203,
-    "nazov": "Byt 203",
-    "adresa": "Ulica 6",
-    "cena": "160000 €",
-    "poschodie": 2,
-    "izby": 2,
-    "rozloha": "64",
-    "status": "predane",
-    "images": ["/images/flats/203-1.jpg", "/images/flats/203-2.jpg"],
-    "popis": ["Zrekonštruovaný byt", "Nízke náklady", "Blízkosť obchodov"]
-  },
-  {
-    "id": 204,
-    "nazov": "Byt 204",
-    "adresa": "Ulica 7",
-    "cena": "235000 €",
+    "id": 107,
+    "nazov": "Byt B7",
+    "adresa": "2. NP",
+    "cena": "264850.98 €",
     "poschodie": 2,
     "izby": 3,
-    "rozloha": "95",
-    "status": "predane",
-    "images": ["/images/flats/204-1.jpg", "/images/flats/204-2.jpg", "/images/flats/204-3.jpg"],
-    "popis": ["Luxusný byt", "2 kúpeľne", "Klimatizácia"]
+    "rozloha": "58.98",
+    "status": "volne",
+    "images": [
+      "/images/flats/107-1.jpg"
+    ],
+    "popis": [
+      "Chodba 2.71 m2",
+      "WC 2.75 m2",
+      "Kúpeľňa 9.44 m2",
+      "Obývacia izba s kuchyňou 19.58 m2",
+      "Izba 24.5 m2"
+    ]
   },
   {
-    "id": 301,
-    "nazov": "Byt 301",
-    "adresa": "Ulica 8",
-    "cena": "200000 €",
-    "poschodie": 3,
-    "izby": 3,
-    "rozloha": "88",
-    "status": "predane",
-    "images": ["/images/flats/301-1.jpg", "/images/flats/301-2.jpg"],
-    "popis": ["Svetlý byt", "Krásny výhľad", "Výťah v budove"]
-  },
-  {
-    "id": 302,
-    "nazov": "Byt 302",
-    "adresa": "Ulica 9",
-    "cena": "150000 €",
+    "id": 108,
+    "nazov": "Byt C10",
+    "adresa": "3. NP",
+    "cena": "217109.76 €",
     "poschodie": 3,
     "izby": 2,
-    "rozloha": "60",
-    "status": "predane",
-    "images": ["/images/flats/302-1.jpg", "/images/flats/302-2.jpg"],
-    "popis": ["Kompletná rekonštrukcia", "Tichý vchod", "Dobré parkovanie"]
+    "rozloha": "63.51",
+    "status": "volne",
+    "images": [
+      "/images/flats/108-1.jpg"
+    ],
+    "popis": [
+      "Chodba 5.91 m2",
+      "WC 2.06 m2",
+      "Kúpeľňa 5.18 m2",
+      "Obývacia izba s kuchyňou 21.16 m2",
+      "Izba 15.1 m2"
+    ]
   },
   {
-    "id": 303,
-    "nazov": "Byt 303",
-    "adresa": "Ulica 10",
-    "cena": "165000 €",
-    "poschodie": 3,
-    "izby": 2,
-    "rozloha": "66",
-    "status": "predane",
-    "images": ["/images/flats/303-1.jpg", "/images/flats/303-2.jpg"],
-    "popis": ["Pekná dispozícia", "Zeleň v okolí", "Dobré spojenie MHD"]
-  },
-  {
-    "id": 304,
-    "nazov": "Byt 304",
-    "adresa": "Ulica 11",
-    "cena": "240000 €",
+    "id": 109,
+    "nazov": "Byt C11",
+    "adresa": "3. NP",
+    "cena": "297121.26 €",
     "poschodie": 3,
     "izby": 3,
-    "rozloha": "98",
-    "status": "predane",
-    "images": ["/images/flats/304-1.jpg", "/images/flats/304-2.jpg", "/images/flats/304-3.jpg"],
-    "popis": ["Luxusná výbava", "Drevené podlahy", "Kúpeľňa s oknom"]
+    "rozloha": "63.72",
+    "status": "volne",
+    "images": [
+      "/images/flats/109-1.jpg"
+    ],
+    "popis": [
+      "Chodba 11.34 m2",
+      "WC 2.94 m2",
+      "Kúpeľňa 3.40 m2",
+      "Obývacia izba s kuchyňou 23.94 m2",
+      "Izba 12.54 m2",
+      "Izba 9.41 m2"
+    ]
   }
 ]
