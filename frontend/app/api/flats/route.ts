@@ -10,7 +10,7 @@ export async function GET() {
     const data = await fs.readFile(filePath, 'utf-8');
     const flats = JSON.parse(data);
     return NextResponse.json(flats);
-  } catch (error) {
+  } catch {
     return NextResponse.json({ error: 'Could not read file' }, { status: 500 });
   }
 }
