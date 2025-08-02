@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     const jsonData = await fs.readFile(filePath, 'utf-8');
     const flats = JSON.parse(jsonData);
     res.status(200).json(flats);
-  } catch (error) {
+  } catch {
     res.status(500).json({ error: 'Failed to read flats.json' });
   }
 }

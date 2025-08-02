@@ -26,7 +26,7 @@ export function GET(req: Request) {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
-  } catch (e) {
+  } catch {
     return new Response(JSON.stringify({ error: 'Server error' }), { status: 500 });
   }
 }
