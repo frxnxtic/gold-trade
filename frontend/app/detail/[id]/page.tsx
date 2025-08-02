@@ -5,11 +5,7 @@ import ClientDetailPage from './client';
 export const dynamicParams = true;
 export const dynamic = 'force-dynamic';
 
-type PageProps = {
-  params: { id: string }; // ✅ params is not a Promise unless you're doing something unusual
-};
-
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params }: { params: { id: string } }) {
   const id = Number(params.id);
   if (isNaN(id)) return notFound();
 
