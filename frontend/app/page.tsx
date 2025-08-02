@@ -4,7 +4,7 @@ import FloorMap from "@/components/FloorMap";
 import FlatCatalogSlider from "@/components/FlatCatalogSlider";
 
 async function getFlats() {
-  const res = await fetch('http://localhost:3000/api/flats?id=all', {
+  const res = await fetch('/api/flats?id=all', {
     next: { revalidate: 60 }, // кеш 60 сек
   });
   if (!res.ok) return [];
