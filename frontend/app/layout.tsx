@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Playfair_Display, Inter } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Основной текст — Inter
+const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Заголовки — Playfair Display (красивый, элегантный)
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-display',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -29,10 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="sk" className={`${inter.variable} ${playfair.variable}`}>
+        <body className={`${playfair.variable} font-display`}>
         {children}
       </body>
     </html>

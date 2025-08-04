@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 @import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: 'Inter', sans-serif;
+--font-heading: 'Playfair Display', serif;
+  --font-handwritten: "Playwrite AU NSW", cursive;
+
 }
 
 @theme inline {
@@ -14,10 +27,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d0d0d; 
+    --foreground: #f1f1f1; 
   }
 }
+
 
 body {
   background: var(--background);
@@ -26,4 +40,17 @@ body {
 }
 html {
   scroll-behavior: smooth;
+}
+
+
+@layer utilities {
+  .font-bebas {
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+  .font-archivo-black {
+    font-family: "Archivo Black", sans-serif;
+  }
+
+
 }
