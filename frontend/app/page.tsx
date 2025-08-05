@@ -2,6 +2,7 @@ import ContactForm from "@/components/ContactForm";
 import HeroSection from "@/components/HeroSection";
 import FloorMap from "@/components/FloorMap";
 import FlatCatalogSlider from "@/components/FlatCatalogSlider";
+import FloatingContactButton from "@/components/FloatingContactButton";
 
 async function getFlats() {
   const res = await fetch('https://gold-trade.sk/api/flats?id=all', {
@@ -85,11 +86,39 @@ export default async function Home() {
 </section>
 
 
-      {/* Sekcia: Kontakt */}
-      <section className="bg-[#2E2E2E] p-6">
-        <h2 className="text-2xl font-semibold mb-4">Kontaktujte nás</h2>
-        <ContactForm />
-      </section>
+     <section id = "kontakt"
+  className="relative bg-cover bg-center text-white py-20 px-6 md:px-16"
+  style={{ backgroundImage: "url('/kontact_background.png')" }}
+>
+  {/* Затемнение + размытие фона */}
+  <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
+
+  {/* Контент поверх фона */}
+  <div className="relative z-10 max-w-3xl mx-auto">
+    <h2 className="text-4xl font-bold mb-8 text-center">Kontaktujte nás</h2>
+
+    {/* Формуляр в рамке */}
+    <div className="bg-[#1E1E1E]/80 border border-[#D4AF37] rounded-xl p-6 shadow-lg">
+      <ContactForm />
+       <div className="text-center mt-4 text-gray-600">alebo
+
+    <a
+      href={`https://wa.me/${'+421987654321'.replace('+', '')}`} // ← замени на нужный номер
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-4 inline-block w-full text-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300"
+    >
+      Napísať na WhatsApp
+    </a>
+  </div>
+    </div>
+    
+  </div>
+
+</section>
+
+<FloatingContactButton />
+
 
       <footer className="bg-[#1E1E1E] text-white px-6 md:px-16 py-8 mt-12">
         <div className="flex flex-col md:flex-row justify-between items-center text-sm gap-4">
