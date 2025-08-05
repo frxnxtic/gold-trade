@@ -18,24 +18,53 @@ export default async function Home() {
     <main className="bg-[#2E2E2E] text-white min-h-screen">
       <HeroSection />
 
-      {/* Sekcia: Prečo si vybrať nás */}
-      <section className="bg-[#1E1E1E] text-white px-6 md:px-16 py-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Prečo si vybrať nás</h2>
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-semibold text-[#D4AF37] mb-2">Skvelá lokalita</h3>
-            <p className="text-gray-300">Moderné bývanie priamo v srdci mesta, s kompletnou občianskou vybavenosťou.</p>
-          </div>
-          <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-semibold text-[#D4AF37] mb-2">Kvalitná výstavba</h3>
-            <p className="text-gray-300">Používame len kvalitné materiály a moderné technológie, aby ste mali istotu do budúcna.</p>
-          </div>
-          <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-semibold text-[#D4AF37] mb-2">Osobný prístup</h3>
-            <p className="text-gray-300">Záleží nám na spokojnosti klientov – pomôžeme vám s celým procesom kúpy.</p>
-          </div>
-        </div>
-      </section>
+
+
+
+
+
+
+    {/* Sekcia: Prečo si vybrať nás */}
+<section className="relative z-10 px-6 md:px-16 py-20 text-white bg-gradient-to-b from-[#1E1E1E] via-[#1B1B1B] to-[#181818]">
+
+  {/* Заголовок */}
+  <h2 className="text-4xl md:text-5xl font-archivo-black text-center mb-12 tracking-tight relative z-10">
+    Prečo si <span className="text-[#D4AF37]">vybrať nás</span>
+  </h2>
+
+  {/* Карточки */}
+  <div className="grid md:grid-cols-3 gap-10 text-center relative z-10">
+
+    {/* 1. Skvelá lokalita */}
+    <div className="bg-[#2A2A2A] hover:bg-[#2F2F2F] p-8 rounded-3xl shadow-xl transition-transform duration-300 transform hover:scale-105">
+      <div className="text-[#D4AF37] text-4xl mb-4">📍</div>
+      <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">Skvelá lokalita</h3>
+      <p className="text-gray-300 leading-relaxed">
+        Moderné bývanie priamo v srdci mesta s kompletnou občianskou vybavenosťou.
+      </p>
+    </div>
+
+    {/* 2. Kvalitná výstavba */}
+    <div className="bg-[#2A2A2A] hover:bg-[#2F2F2F] p-8 rounded-3xl shadow-xl transition-transform duration-300 transform hover:scale-105">
+      <div className="text-[#D4AF37] text-4xl mb-4">🏗️</div>
+      <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">Kvalitná výstavba</h3>
+      <p className="text-gray-300 leading-relaxed">
+        Používame len kvalitné materiály a moderné technológie, aby ste mali istotu do budúcna.
+      </p>
+    </div>
+
+    {/* 3. Osobný prístup */}
+    <div className="bg-[#2A2A2A] hover:bg-[#2F2F2F] p-8 rounded-3xl shadow-xl transition-transform duration-300 transform hover:scale-105">
+      <div className="text-[#D4AF37] text-4xl mb-4">🤝</div>
+      <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">Osobný prístup</h3>
+      <p className="text-gray-300 leading-relaxed">
+        Záleží nám na spokojnosti klientov – pomôžeme vám s celým procesom kúpy.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
       {/* ✅ Sekcia: Katalóg bytov */}
       <section id="katalog" className="bg-white text-black px-6 pt-6 pb-2">

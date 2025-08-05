@@ -129,50 +129,55 @@ export default function FloorMap() {
     <section id="katalog" className="bg-white text-black px-6 md:px-16 py-16">
       <h2 className="text-3xl font-bold mb-6 text-center">Pôdorys bytov</h2>
 
-      <div className="flex justify-center gap-4 mb-6">
-        {floors.map((floor) => (
-          <button
-            key={floor.id}
-            onClick={() => setSelectedFloor(floor.id as FloorKey)}
-            className={`px-4 py-2 rounded-full border transition-all duration-300 ${
-              selectedFloor === floor.id
-                ? "bg-[#D4AF37] text-black"
-                : "bg-white text-black border-gray-400"
-            }`}
-          >
-            {floor.label}
-          </button>
-        ))}
-      </div>
+ {/* Кнопки этажей */}
+  <div className="flex justify-center gap-4 mb-10">
+    {floors.map((floor) => (
+      <button
+        key={floor.id}
+        onClick={() => setSelectedFloor(floor.id as FloorKey)}
+        className={`px-5 py-2 rounded-full font-medium border shadow-sm transition-all duration-300
+          ${
+            selectedFloor === floor.id
+              ? "bg-[#D4AF37] text-black border-transparent"
+              : "bg-white text-black border-gray-300 hover:border-[#D4AF37]"
+          }`}
+      >
+        {floor.label}
+      </button>
+    ))}
+  </div>
 
-      <div className="relative max-w-7xl mx-auto min-h-[700px] aspect-[2/1]">
-        <Image
-          src={floors.find((f) => f.id === selectedFloor)?.image || "/floors/1np.png"}
-          alt={`Pôdorys ${selectedFloor}`}
-          width={1400}
-          height={700}
-          className="w-full h-auto"
-          priority
-          placeholder="blur"
-          blurDataURL={floors.find((f) => f.id === selectedFloor)?.blur}
-        />
 
-        {/* Кликабельные зоны */}
-        {flats[selectedFloor].map((flat: Flat) => (
-          <Link key={flat.id} href={`/detail/${flat.id}`}>
-            <div
-              className={`absolute border cursor-pointer transition ${flat.color}`}
-              style={{
-                top: flat.top,
-                left: flat.left,
-                width: flat.width,
-                height: flat.height,
-              }}
-              title={flat.title}
-            />
-          </Link>
-        ))}
-      </div>
-    </section>
-  );
+{/* Планировка с анимацией */}
+<div className="relative w-full max-w-[1200px] mx-auto aspect-[2/1] rounded-xl overflow-hidden border shadow-xl">
+  <Image
+    key={selectedFloor}
+    src={floors.find((f) => f.id === selectedFloor)?.image || "/floors/1np.png"}
+    alt={`Pôdorys ${selectedFloor}`}
+    width={1200}
+    height={700}
+    className="object-contain w-full h-auto  transition-opacity duration-500"
+    priority
+    placeholder="blur"
+    blurDataURL={floors.find((f) => f.id === selectedFloor)?.blur}
+  />
+  
+  {flats[selectedFloor].map((flat: Flat) => (
+    <Link key={flat.id} href={`/detail/${flat.id}`}>
+      <div
+        className={`absolute border cursor-pointer transition ${flat.color}`}
+        style={{
+          top: flat.top,
+          left: flat.left,
+          width: flat.width,
+          height: flat.height,
+        }}
+        title={flat.title}
+      />
+    </Link>
+  ))}
+</div>
+
+                </section>
+              );
 }
