@@ -74,7 +74,7 @@ const flats = {
       },
     ],
     "3np": [
-      {
+    /*  {
         id: 108,
         title: "Byt 301 – 3 izby, 88 m²",
        top: "11%",
@@ -91,9 +91,9 @@ const flats = {
         width: "22%",
         height: "27%",
         color: "bg-blue-300/30 hover:bg-blue-300/50 border-blue-500",
-      },
+      },*/
       {
-        id: 110,
+        id: 108,
         title: "Byt 303 – 2 izby, 66 m²",
          top: "17%",
         left: "53.5%",
@@ -102,7 +102,7 @@ const flats = {
         color: "bg-orange-300/30 hover:bg-orange-300/50 border-orange-500",
       },
       {
-        id: 111,
+        id: 109,
         title: "Byt 304 – 3 izby, 98 m²",
         top: "10%",
         left: "77%",
