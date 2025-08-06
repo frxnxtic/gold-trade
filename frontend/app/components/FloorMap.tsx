@@ -37,7 +37,7 @@ const flats = {
     ],
     "2np": [
       {
-        id: 201,
+        id: 104,
         title: "Byt 201 – 3 izby, 85 m²",
         top: "11%",
         left: "4%",
@@ -46,7 +46,7 @@ const flats = {
         color: "bg-purple-300/30 hover:bg-purple-300/50 border-purple-500",
       },
       {
-        id: 202,
+        id: 105,
         title: "Byt 202 – 2 izby, 62 m²",
         top: "17%",
         left: "31.5%",
@@ -55,7 +55,7 @@ const flats = {
         color: "bg-blue-300/30 hover:bg-blue-300/50 border-blue-500",
       },
       {
-        id: 203,
+        id: 106,
         title: "Byt 203 – 2 izby, 64 m²",
         top: "18%",
         left: "53.5%",
@@ -64,7 +64,7 @@ const flats = {
         color: "bg-orange-300/30 hover:bg-orange-300/50 border-orange-500",
       },
       {
-        id: 204,
+        id: 107,
         title: "Byt 204 – 3 izby, 95 m²",
         top: "11%",
         left: "77%",
@@ -75,7 +75,7 @@ const flats = {
     ],
     "3np": [
       {
-        id: 301,
+        id: 108,
         title: "Byt 301 – 3 izby, 88 m²",
        top: "11%",
         left: "4%",
@@ -84,7 +84,7 @@ const flats = {
         color: "bg-purple-300/30 hover:bg-purple-300/50 border-purple-500",
       },
       {
-        id: 302,
+        id: 109,
         title: "Byt 302 – 2 izby, 60 m²",
         top: "17%",
         left: "31.5%",
@@ -93,7 +93,7 @@ const flats = {
         color: "bg-blue-300/30 hover:bg-blue-300/50 border-blue-500",
       },
       {
-        id: 303,
+        id: 110,
         title: "Byt 303 – 2 izby, 66 m²",
          top: "17%",
         left: "53.5%",
@@ -102,7 +102,7 @@ const flats = {
         color: "bg-orange-300/30 hover:bg-orange-300/50 border-orange-500",
       },
       {
-        id: 304,
+        id: 111,
         title: "Byt 304 – 3 izby, 98 m²",
         top: "10%",
         left: "77%",
