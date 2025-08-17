@@ -100,16 +100,9 @@ export default async function Home() {
     {/* Формуляр в рамке */}
     <div className="bg-[#1E1E1E]/80 border border-[#D4AF37] rounded-xl p-6 shadow-lg">
       <ContactForm />
-       <div className="text-center mt-4 text-gray-600">alebo
+       <div className="text-center mt-4 text-gray-600">
 
-    <a
-      href={`https://wa.me/${'+421987654321'.replace('+', '')}`} // ← замени на нужный номер
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-4 inline-block w-full text-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300"
-    >
-      Napísať na WhatsApp
-    </a>
+   
   </div>
     </div>
     

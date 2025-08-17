@@ -149,18 +149,19 @@ export default function FloorMap() {
 
 
 {/* Планировка с анимацией */}
-<div className="relative w-full max-w-[1200px] mx-auto aspect-[2/1] rounded-xl overflow-hidden border shadow-xl">
+<div className="relative w-full max-w-[1200px] mx-auto aspect-[2/1]">
   <Image
     key={selectedFloor}
     src={floors.find((f) => f.id === selectedFloor)?.image || "/floors/1np.png"}
     alt={`Pôdorys ${selectedFloor}`}
     width={1200}
     height={700}
-    className="object-contain w-full h-auto  transition-opacity duration-500"
+    className="object-contain w-full h-auto rounded-xl border shadow-xl transition-opacity duration-500"
     priority
     placeholder="blur"
     blurDataURL={floors.find((f) => f.id === selectedFloor)?.blur}
   />
+
   
   {flats[selectedFloor].map((flat: Flat) => (
     <Link key={flat.id} href={`/detail/${flat.id}`}>
