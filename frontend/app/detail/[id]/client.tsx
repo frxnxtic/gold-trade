@@ -23,7 +23,7 @@ type Props = {
 };
 
 export default function ClientDetailPage({ flat, allFlats }: Props) {
-  const phone = '+421904732649';
+  const phone = '+421901910610';
   const [images, setImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
