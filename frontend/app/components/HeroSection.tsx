@@ -27,8 +27,12 @@ export default function HeroSection() {
             Moderné bývanie v centre mesta s dôrazom na štýl a komfort.
           </p>
           <br />
+          <h2 className="font-bebas text-5xl md:text-6xl tracking-tight text-center animate-fade-in-up">
+              Namestie SNP 5, Banska Bystrica
+          </h2>
+          <br />
           <h1 className="font-bebas text-5xl md:text-6xl tracking-tight text-center animate-fade-in-up">
-            Predaj <span className="text-yellow-400">bytov</span>
+            Predaj 2 a 3-izbových<span className="text-yellow-400">bytov</span>
           </h1>
           <br />
           <a

@@ -34,7 +34,7 @@ export default async function Home() {
   </h2>
 
   {/* Карточки */}
-  <div className="grid md:grid-cols-3 gap-10 text-center relative z-10">
+  <div className="grid md:grid-cols-4 gap-10 text-center relative z-10">
 
     {/* 1. Skvelá lokalita */}
     <div className="bg-[#2A2A2A] hover:bg-[#2F2F2F] p-8 rounded-3xl shadow-xl transition-transform duration-300 transform hover:scale-105">
@@ -50,7 +50,7 @@ export default async function Home() {
       <div className="text-[#D4AF37] text-4xl mb-4">🏗️</div>
       <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">Kvalitná výstavba</h3>
       <p className="text-gray-300 leading-relaxed">
-        Používame len kvalitné materiály a moderné technológie, aby ste mali istotu do budúcna.
+        Používame len kvalitné materiály a moderné technológie, aby ste mali istotu do budúcna. Vybavenie bytov je standardne.
       </p>
     </div>
 
@@ -62,6 +62,15 @@ export default async function Home() {
         Záleží nám na spokojnosti klientov – pomôžeme vám s celým procesom kúpy.
       </p>
     </div>
+
+      {/* 3. Osobný prístup */}
+      <div className="bg-[#2A2A2A] hover:bg-[#2F2F2F] p-8 rounded-3xl shadow-xl transition-transform duration-300 transform hover:scale-105">
+          <div className="text-[#D4AF37] text-4xl mb-4">🤝</div>
+          <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">Moznost odpoctu DPH</h3>
+          <p className="text-gray-300 leading-relaxed">
+
+          </p>
+      </div>
 
   </div>
 </section>
