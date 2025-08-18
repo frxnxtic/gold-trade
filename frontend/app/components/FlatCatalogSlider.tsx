@@ -67,7 +67,7 @@ export default function FlatCatalogSlider({ flats }: Props) {
         >
           <div className="h-48 relative">
             <Image
-              src={flat.images?.[0] || `/images/flats/${flat.id}-2.jpg`}
+              src={flat.images?.[0] || `/images/flats/${flat.id}-1.jpg`}
               alt={flat.nazov}
               fill
               className="object-contain"
