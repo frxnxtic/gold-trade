@@ -28,7 +28,7 @@ export default function HeroSection() {
           </p>
           <br />
           <h2 className="font-bebas text-4xl md:text-5xl tracking-tight text-center animate-fade-in-up">
-              Namestie SNP 5, Banska Bystrica
+              Námestie SNP 5, Banská Bystrica
           </h2>
           <br />
           <h2 className="font-bebas text-5xl md:text-6xl tracking-tight text-center animate-fade-in-up">

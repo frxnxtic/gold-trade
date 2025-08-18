@@ -66,9 +66,9 @@ export default async function Home() {
       {/* 3. Osobný prístup */}
       <div className="bg-[#2A2A2A] hover:bg-[#2F2F2F] p-8 rounded-3xl shadow-xl transition-transform duration-300 transform hover:scale-105">
           <div className="text-[#D4AF37] text-4xl mb-4">🤝</div>
-          <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">Vybava bytov</h3>
+          <h3 className="text-2xl font-semibold text-[#D4AF37] mb-3">Vybavenie bytov</h3>
           <p className="text-gray-300 leading-relaxed">
-              Vybavenie bytov je standardne. Existuje aj moznost odpoctu DPH.
+              Výbavenie bytov je štandardné (podlahy, dvere, obklady, sanita). Skolaudované a pripravené na okamžité bývanie. Možnosť odpočtu DPH.
           </p>
       </div>
 
