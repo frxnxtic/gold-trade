@@ -120,9 +120,9 @@ export default function FloorMap() {
   const [selectedFloor, setSelectedFloor] = useState<FloorKey>("1np");
 
   const floors = [
-    { id: "1np", label: "1. NP", image: "/floors/1np.png", blur: "/floors/1np-blur.jpg" },
-    { id: "2np", label: "2. NP", image: "/floors/2np.png", blur: "/floors/2np-blur.jpg" },
-    { id: "3np", label: "3. NP", image: "/floors/3np.png", blur: "/floors/3np-blur.jpg" },
+    { id: "1np", label: "1. NP", image: "/floors/1np.png", blur: "/floors/1np-blur.jpg", long_label: "Prvé nadzemné podlažie" },
+    { id: "2np", label: "2. NP", image: "/floors/2np.png", blur: "/floors/2np-blur.jpg", long_label: "Druhé nadzemné podlažie" },
+    { id: "3np", label: "3. NP", image: "/floors/3np.png", blur: "/floors/3np-blur.jpg", long_label: "Tretie nadzemné podlažie" },
   ];
 
   return (
@@ -133,6 +133,7 @@ export default function FloorMap() {
   <div className="flex justify-center gap-4 mb-10">
     {floors.map((floor) => (
       <button
+        title={floor.long_label}
         key={floor.id}
         onClick={() => setSelectedFloor(floor.id as FloorKey)}
         className={`px-5 py-2 rounded-full font-medium border shadow-sm transition-all duration-300
