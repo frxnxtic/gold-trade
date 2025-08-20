@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import ClientDetailPage from './client';
 
-// 💡 Указываем, что страница динамическая и не кэшируется
 export const dynamicParams = true;
 export const dynamic = 'force-dynamic';
 
@@ -9,7 +8,8 @@ type Flat = {
   id: number;
   nazov: string;
   adresa: string;
-  cena: string;
+  cenaWithDPH: string;
+  cenaWithoutDPH: string;
   poschodie: number;
   izby: number;
   rozloha: string;
@@ -18,13 +18,17 @@ type Flat = {
   popis: string[];
 };
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const id = Number(params.id);
-  if (isNaN(id)) return notFound();
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
-  const res = await fetch('https://gold-trade.sk/api/flats', { cache: 'no-store' });
+  const flatId = Number(id);
+  if (isNaN(flatId)) return notFound();
+
+  const res = await fetch("https://gold-trade.sk/api/flats", { cache: "no-store" });
+  if (!res.ok) return notFound();
+
   const flats: Flat[] = await res.json();
-  const flat = flats.find((f) => f.id === id);
+  const flat = flats.find((f) => f.id === flatId);
 
   if (!flat) return notFound();
 

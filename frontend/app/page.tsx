@@ -6,11 +6,19 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 
 async function getFlats() {
   const res = await fetch('https://gold-trade.sk/api/flats?id=all', {
-    next: { revalidate: 60 }, // кеш 60 сек
+    cache: 'no-store',             
   });
   if (!res.ok) return [];
-  return res.json();
+
+  const data = await res.json();
+
+  return (Array.isArray(data) ? data : []).map((f: any) => ({
+    ...f,
+    cenaWithDPH:    f.cenaWithDPH    ?? f.cena_with_dph    ?? '',
+    cenaWithoutDPH: f.cenaWithoutDPH ?? f.cena_without_dph ?? '',
+  }));
 }
+
 
 export default async function Home() {
   const flats = await getFlats();

@@ -8,7 +8,8 @@ type Flat = {
   id: number;
   nazov: string;
   adresa: string;
-  cena: string;
+  cenaWithDPH: string;
+  cenaWithoutDPH: string;
   poschodie: number;
   izby: number;
   rozloha: string;
@@ -140,7 +141,9 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                   <p key={i}><strong className="text-white">{item}</strong></p>
                 ))}
               <p className="text-white text-2xl font-bold pt-4">{flat.rozloha} m²</p>
-              <p className="text-white text-2xl font-bold">{flat.cena}</p>
+              <p className="text-white text-2xl font-bold">{flat.cenaWithDPH}</p>
+              <p className="text-white text-2xl">{flat.cenaWithoutDPH}</p>
+
             </div>
 
             <a href={`https://wa.me/${phone.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
@@ -166,7 +169,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                 />
                 <h4 className="text-lg text-yellow-400 font-bold mt-2">{byt.nazov}</h4>
                 <p className="text-gray-300 text-sm">{byt.rozloha} m² — {byt.izby} izby</p>
-                <p className="text-white text-sm font-semibold">{byt.cena || 'Cena nedostupná'}</p>
+                <p className="text-white text-sm font-semibold">{byt.cenaWithDPH || 'Cena nedostupná'}</p>
               </Link>
             ))}
           </div>

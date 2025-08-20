@@ -3,12 +3,14 @@
     "id": 101,
     "nazov": "Byt A1",
     "adresa": "1. NP",
-    "cena": "213 983,10 €",
+    "cenaWithDPH": "213 983,10 €",
+    "cenaWithoutDPH": "173 970,00 €",
     "poschodie": 1,
     "izby": 2,
     "rozloha": "51.34",
     "status": "volne",
     "images": [
+      "/images/flats/101-0.jpg",
       "/images/flats/101-1.jpg",
       "/images/flats/101-4.jpg",
       "/images/flats/101-5.jpg"
@@ -24,12 +26,13 @@
     "id": 102,
     "nazov": "Byt A2",
     "adresa": "1. NP",
-    "cena": "369 782,28 €",
-    "poschodie": 1,
+"cenaWithDPH": "369 782,28 €",
+    "cenaWithoutDPH": "300 636,00 €",    "poschodie": 1,
     "izby": 3,
     "rozloha": "88.35",
     "status": "volne",
     "images": [
+       "/images/flats/102-0.jpg",
       "/images/flats/102-1.jpg",
       "/images/flats/102-2.jpg"
     ],
@@ -47,13 +50,16 @@
     "id": 103,
     "nazov": "Byt A3",
     "adresa": "2. NP",
-    "cena": "288 244,35 €",
-    "poschodie": 2,
+"cenaWithDPH": "288 244,35 €",
+    "cenaWithoutDPH": "234 345,00 €",   
+     "poschodie": 2,
     "izby": 2,
     "rozloha": "69.44",
     "status": "volne",
     "images": [
-      "/images/flats/103-1.jpg",
+
+    "/images/flats/103-0.jpg",
+"/images/flats/103-1.jpg",
       "/images/flats/103-2.jpg"
     ],
     "popis": [
@@ -67,12 +73,14 @@
     "id": 104,
     "nazov": "Byt B4",
     "adresa": "2. NP",
-    "cena": "239 506,83 €",
-    "poschodie": 2,
+"cenaWithDPH": "239 506,83 €",
+    "cenaWithoutDPH": "194 721,00 €",   
+     "poschodie": 2,
     "izby": 2,
     "rozloha": "52.22",
     "status": "volne",
     "images": [
+      "/images/flats/104-0.jpg",
       "/images/flats/104-1.jpg",
       "/images/flats/104-2.jpg"
     ],
@@ -87,12 +95,14 @@
     "id": 105,
     "nazov": "Byt B5",
     "adresa": "2. NP",
-    "cena": "379 579,23 €",
-    "poschodie": 2,
+"cenaWithDPH": "379 579,23 €",
+    "cenaWithoutDPH": "308 601,00 €",   
+     "poschodie": 2,
     "izby": 2,
     "rozloha": "89.43",
     "status": "volne",
     "images": [
+            "/images/flats/105-0.jpg",
       "/images/flats/105-1.jpg"
     ],
     "popis": [
@@ -108,13 +118,15 @@
     "id": 106,
     "nazov": "Byt B6",
     "adresa": "2. NP",
-    "cena": "218 080,23 €",
-    "poschodie": 2,
+"cenaWithDPH": "218 080,23 €",
+    "cenaWithoutDPH": "177 301,00 €",   
+     "poschodie": 2,
     "izby": 2,
     "rozloha": "45.78",
     "status": "volne",
     "images": [
-      "/images/flats/106-1.jpg"
+            "/images/flats/106-0.jpg",
+"/images/flats/106-1.jpg"
     ],
     "popis": [
       "Chodba: 5.88 m2",
@@ -127,12 +139,13 @@
     "id": 107,
     "nazov": "Byt B7",
     "adresa": "2. NP",
-    "cena": "264 850,98 €",
-    "poschodie": 2,
+"cenaWithDPH": "264 850,98 €",
+    "cenaWithoutDPH": "215 326,00 €",    "poschodie": 2,
     "izby": 3,
     "rozloha": "58.58",
     "status": "volne",
     "images": [
+      "/images/flats/107-0.jpg",
       "/images/flats/107-1.jpg"
     ],
     "popis": [
@@ -148,12 +161,13 @@
     "id": 108,
     "nazov": "Byt C10",
     "adresa": "3. NP",
-    "cena": "217 109,76 €",
-    "poschodie": 3,
+"cenaWithDPH": "217 109,76 €",
+    "cenaWithoutDPH": "176 512,00 €",    "poschodie": 3,
     "izby": 2,
     "rozloha": "63.51",
     "status": "volne",
     "images": [
+      "/images/flats/108-0.jpg",
       "/images/flats/108-1.jpg"
     ],
     "popis": [
@@ -168,13 +182,15 @@
     "id": 109,
     "nazov": "Byt C11",
     "adresa": "3. NP",
-    "cena": "297 121,26 €",
+"cenaWithDPH": "297 121,26 €",
+    "cenaWithoutDPH": "241 562,00 €",
     "poschodie": 3,
     "izby": 3,
     "rozloha": "84.40",
     "status": "volne",
     "images": [
-      "/images/flats/109-1.jpg"
+        "/images/flats/109-0.jpg",
+        "/images/flats/109-1.jpg"
     ],
     "popis": [
       "Chodba: 11.34 m2",
