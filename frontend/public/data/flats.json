@@ -1,7 +1,7 @@
 [
   {
-    "id": 102,
-    "nazov": "Byt A2",
+    "id": 101,
+    "nazov": "Byt A1",
     "adresa": "1. NP",
     "cenaWithDPH": "213 983,10 €",
     "cenaWithoutDPH": "173 970,00 €",
@@ -10,10 +10,9 @@
     "rozloha": "51.34",
     "status": "volne",
     "images": [
-      "/images/flats/101-0.jpg",
-      "/images/flats/101-1.jpg",
-      "/images/flats/101-4.jpg",
-      "/images/flats/101-5.jpg"
+       "/images/flats/102-0.jpg",
+      "/images/flats/102-1.jpg",
+      "/images/flats/102-2.jpg"
     ],
     "popis": [
       "Chodba: 3.26 m2",
@@ -23,18 +22,19 @@
     ]
   },
   {
-    "id": 101,
-    "nazov": "Byt A1",
+    "id": 102,
+    "nazov": "Byt A2",
     "adresa": "1. NP",
 "cenaWithDPH": "369 782,28 €",
     "cenaWithoutDPH": "300 636,00 €",    "poschodie": 1,
     "izby": 3,
     "rozloha": "88.35",
     "status": "volne",
-    "images": [
-       "/images/flats/102-0.jpg",
-      "/images/flats/102-1.jpg",
-      "/images/flats/102-2.jpg"
+     "images": [
+      "/images/flats/101-0.jpg",
+      "/images/flats/101-1.jpg",
+      "/images/flats/101-4.jpg",
+      "/images/flats/101-5.jpg"
     ],
     "popis": [
       "Chodba: 14.41 m2",
@@ -79,10 +79,9 @@
     "izby": 2,
     "rozloha": "52.22",
     "status": "volne",
-    "images": [
-      "/images/flats/104-0.jpg",
-      "/images/flats/104-1.jpg",
-      "/images/flats/104-2.jpg"
+     "images": [
+            "/images/flats/105-0.jpg",
+      "/images/flats/105-1.jpg"
     ],
     "popis": [
       "Chodba: 3.61 m2",
@@ -102,8 +101,9 @@
     "rozloha": "89.43",
     "status": "volne",
     "images": [
-            "/images/flats/105-0.jpg",
-      "/images/flats/105-1.jpg"
+      "/images/flats/104-0.jpg",
+      "/images/flats/104-1.jpg",
+      "/images/flats/104-2.jpg"
     ],
     "popis": [
       "Chodba: 15.73 m2",
@@ -125,8 +125,8 @@
     "rozloha": "45.78",
     "status": "volne",
     "images": [
-            "/images/flats/106-0.jpg",
-"/images/flats/106-1.jpg"
+      "/images/flats/107-0.jpg",
+      "/images/flats/107-1.jpg"
     ],
     "popis": [
       "Chodba: 5.88 m2",
@@ -144,9 +144,10 @@
     "izby": 3,
     "rozloha": "58.58",
     "status": "volne",
+    
     "images": [
-      "/images/flats/107-0.jpg",
-      "/images/flats/107-1.jpg"
+            "/images/flats/106-0.jpg",
+"/images/flats/106-1.jpg"
     ],
     "popis": [
       "Chodba: 11.71 m2",
@@ -166,9 +167,9 @@
     "izby": 2,
     "rozloha": "63.51",
     "status": "volne",
-    "images": [
-      "/images/flats/108-0.jpg",
-      "/images/flats/108-1.jpg"
+     "images": [
+        "/images/flats/109-0.jpg",
+        "/images/flats/109-1.jpg"
     ],
     "popis": [
       "Chodba: 4.91 m2",
@@ -188,9 +189,10 @@
     "izby": 3,
     "rozloha": "84.40",
     "status": "volne",
+   
     "images": [
-        "/images/flats/109-0.jpg",
-        "/images/flats/109-1.jpg"
+      "/images/flats/108-0.jpg",
+      "/images/flats/108-1.jpg"
     ],
     "popis": [
       "Chodba: 11.34 m2",
