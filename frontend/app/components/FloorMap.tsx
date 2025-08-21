@@ -9,7 +9,7 @@ const flats = {
     "1np": [
       {
         id: 101,
-        title: "Byt 101 – 3 izby, 82 m²",
+        title: "Byt 101 – 3 izby, 88.35 m²",
         top: "11%",
         left: "3%",
         width: "28%",
@@ -18,7 +18,7 @@ const flats = {
       },
       {
         id: 102,
-        title: "Byt 102 – 2 izby, 60 m²",
+        title: "Byt 102 – 2 izby, 51.34 m²",
         top: "17%",
         left: "31%",
         width: "22%",
@@ -27,7 +27,7 @@ const flats = {
       },
       {
         id: 103,
-        title: "Byt 103 – 4 izby, 105 m²",
+        title: "Byt 103 – 2 izby, 69.44 m²",
         top: "11%",
         left: "66%",
         width: "22%",
@@ -38,7 +38,7 @@ const flats = {
     "2np": [
       {
         id: 104,
-        title: "Byt 201 – 3 izby, 85 m²",
+        title: "Byt 201 – 2 izby, 89.43 m²",
         top: "11%",
         left: "4%",
         width: "28%",
@@ -47,7 +47,7 @@ const flats = {
       },
       {
         id: 105,
-        title: "Byt 202 – 2 izby, 62 m²",
+        title: "Byt 202 – 2 izby, 52.22 m²",
         top: "17%",
         left: "31.5%",
         width: "22%",
@@ -56,7 +56,7 @@ const flats = {
       },
       {
         id: 106,
-        title: "Byt 203 – 2 izby, 64 m²",
+        title: "Byt 203 – 2 izby, 45.78 m²",
         top: "18%",
         left: "53.5%",
         width: "24%",
@@ -65,7 +65,7 @@ const flats = {
       },
       {
         id: 107,
-        title: "Byt 204 – 3 izby, 95 m²",
+        title: "Byt 204 – 3 izby, 58.58 m²",
         top: "11%",
         left: "77%",
         width: "19%",
@@ -74,8 +74,8 @@ const flats = {
       },
     ],
     "3np": [
-    /*  {
-        id: 108,
+      {
+        id: 110,
         title: "Byt 301 – 3 izby, 88 m²",
        top: "11%",
         left: "4%",
@@ -84,17 +84,17 @@ const flats = {
         color: "bg-purple-300/30 hover:bg-purple-300/50 border-purple-500",
       },
       {
-        id: 109,
+        id: 111,
         title: "Byt 302 – 2 izby, 60 m²",
         top: "17%",
         left: "31.5%",
         width: "22%",
         height: "27%",
         color: "bg-blue-300/30 hover:bg-blue-300/50 border-blue-500",
-      },*/
+      },
       {
         id: 108,
-        title: "Byt 303 – 2 izby, 66 m²",
+        title: "Byt 303 – 2 izby, 63.51 m²",
          top: "17%",
         left: "53.5%",
         width: "24%",
@@ -103,7 +103,7 @@ const flats = {
       },
       {
         id: 109,
-        title: "Byt 304 – 3 izby, 98 m²",
+        title: "Byt 304 – 3 izby, 84.40 m²",
         top: "10%",
         left: "77%",
         width: "19%",
@@ -164,10 +164,29 @@ export default function FloorMap() {
   />
 
   
-  {flats[selectedFloor].map((flat: Flat) => (
+  {flats[selectedFloor].map((flat: Flat) => {
+  const isSold = flat.id === 110 || flat.id === 111;
+
+  return isSold ? (
+    <div
+      key={flat.id}
+      className={`absolute border transition ${flat.color} opacity-50 cursor-not-allowed flex items-center justify-center`}
+      style={{
+        top: flat.top,
+        left: flat.left,
+        width: flat.width,
+        height: flat.height,
+      }}
+      title={`${flat.title} – PREDANÝ`}
+    >
+      <span className="bg-black/70 text-white text-sm md:text-base px-2 py-1 rounded">
+        PREDANÝ
+      </span>
+    </div>
+  ) : (
     <Link key={flat.id} href={`/detail/${flat.id}`}>
       <div
-        className={`absolute border cursor-pointer transition ${flat.color}`}
+        className={`absolute border cursor-pointer transition ${flat.color} flex items-center justify-center`}
         style={{
           top: flat.top,
           left: flat.left,
@@ -175,9 +194,15 @@ export default function FloorMap() {
           height: flat.height,
         }}
         title={flat.title}
-      />
+      >
+        <span className="bg-white/80 text-black text-sm md:text-base font-semibold px-2 py-1 rounded">
+          {flat.title.split("–")[1]?.trim()}
+        </span>
+      </div>
     </Link>
-  ))}
+  );
+})}
+
 </div>
 
                 </section>

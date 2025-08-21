@@ -35,7 +35,11 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
       try {
         const res = await fetch(`/api/images-for-flat?id=${flat.id}`);
         const data = await res.json();
-        setImages(data);
+         const combined = [
+        `/images/flats/${flat.id}-0.jpg`,
+        ...data.filter((src: string) => !src.endsWith(`${flat.id}-0.jpg`))
+      ];
+        setImages(combined);
       } catch (error) {
         console.error('Error loading images:', error);
       }
@@ -52,13 +56,32 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
 
   return (
     <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen relative overflow-hidden">
+
+        {/* Кнопка "Späť na hlavnú stránku" по центру */}
+        <Link
+  href="/"
+  className="fixed top-15 left-6 z-[2000] flex items-center gap-2
+             border border-yellow-400 text-yellow-400 font-medium
+             px-4 py-2 rounded-full shadow-md
+             hover:bg-yellow-400 hover:text-black transition duration-300"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  </svg>
+  Naspäť
+</Link>
               {!showModal && (
           <div className="relative z-20 flex justify-center pt-10 mb-10">
-            <div className="border border-yellow-400 text-yellow-400 px-8 py-5 rounded-full text-xl font-bold text-center leading-tight tracking-wide">
-              <div>GOLD</div>
-              <div>TRADE</div>
-            </div>
-          </div>
+  <img
+    src="/LOGO.png"
+    alt="GOLD TRADE Logo"
+    className="h-30 w-auto object-contain drop-shadow-[0_0_25px_#FFD700] 
+               transition-transform duration-300 hover:scale-110 
+               hover:drop-shadow-[0_0_35px_#FFD700]"
+  />
+</div>
+
+
         )}
 
       <hr className="border-t border-yellow-500 opacity-20 mx-auto w-3/4 mb-6 mt-8" />
@@ -141,14 +164,10 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                   <p key={i}><strong className="text-white">{item}</strong></p>
                 ))}
               <p className="text-white text-2xl font-bold pt-4">{flat.rozloha} m²</p>
-              <p className="text-white text-2xl font-bold">{flat.cenaWithDPH}</p>
-              <p className="text-white text-2xl">{flat.cenaWithoutDPH}</p>
+              <p className="text-white text-2xl font-bold"> {flat.cenaWithDPH}</p>
+              <p className="text-white text-1xl"><span className="text-sm font-normal ml-2 text-yellow-300">bez DPH: </span>{flat.cenaWithoutDPH}</p>
 
             </div>
-
-            <a href={`https://wa.me/${phone.replace('+', '')}`} target="_blank" rel="noopener noreferrer" className="inline-block mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
-              Napísať na WhatsApp
-            </a>
           </div>
         </div>
 
@@ -161,11 +180,11 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
             {dalsieByty.map(byt => (
               <Link key={byt.id} href={`/detail/${byt.id}`} className="bg-[#1e1e1e] p-4 rounded-xl hover:bg-[#2a2a2a] transition shadow-lg">
                 <Image
-                  src={`/images/flats/${byt.id}-1.jpg`}
+                  src={`/images/flats/${byt.id}-0.jpg`}
                   alt={`Byt ${byt.id}`}
                   width={400}
                   height={200}
-                  className="w-full h-40 object-cover rounded"
+                   className="w-full aspect-square object-cover rounded-lg"
                 />
                 <h4 className="text-lg text-yellow-400 font-bold mt-2">{byt.nazov}</h4>
                 <p className="text-gray-300 text-sm">{byt.rozloha} m² — {byt.izby} izby</p>
@@ -230,13 +249,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
       GOLD TRADE
     </div>
 
-    {/* Кнопка "Späť na hlavnú stránku" по центру */}
-    <Link
-      href="/"
-      className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-6 rounded-full shadow-md transition duration-300"
-    >
-      ← Späť na hlavnú stránku
-    </Link>
+    
   </div>
 </footer>
 

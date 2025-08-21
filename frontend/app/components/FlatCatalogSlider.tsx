@@ -92,9 +92,6 @@ export default function FlatCatalogSlider({ flats }: Props) {
     <span className="text-xl font-bold text-[#D4AF37]">{flat.cenaWithDPH}</span>
   </div>
 </div>
-{/* debug */}
-{<pre className="text-xs">{JSON.stringify(visibleFlats[0], null, 2)}</pre> }
-
 
             {flat.status === 'predane' && (
               <div className="text-red-500 text-sm font-semibold mt-1">Predané</div>

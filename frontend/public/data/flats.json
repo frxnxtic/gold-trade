@@ -1,7 +1,7 @@
 [
   {
-    "id": 101,
-    "nazov": "Byt A1",
+    "id": 102,
+    "nazov": "Byt A2",
     "adresa": "1. NP",
     "cenaWithDPH": "213 983,10 €",
     "cenaWithoutDPH": "173 970,00 €",
@@ -23,8 +23,8 @@
     ]
   },
   {
-    "id": 102,
-    "nazov": "Byt A2",
+    "id": 101,
+    "nazov": "Byt A1",
     "adresa": "1. NP",
 "cenaWithDPH": "369 782,28 €",
     "cenaWithoutDPH": "300 636,00 €",    "poschodie": 1,
