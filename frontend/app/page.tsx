@@ -165,18 +165,18 @@ export default async function Home() {
               >
                 <span className="inline-flex items-center gap-3">
                   <Phone className="h-5 w-5 text-yellow-400" />
-                  +421&nbsp;000&nbsp;000&nbsp;000
+                  +421&nbsp;901&nbsp;910&nbsp;610
                 </span>
                 <ArrowRight className="h-4 w-4 opacity-0 transition group-hover:opacity-100" />
               </a>
 
               <a
-                href="mailto:info@goldtrade.sk"
+                href="mailto:obbsro@yahoo.com"
                 className="group inline-flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-4 py-3 transition hover:bg-white/10"
               >
                 <span className="inline-flex items-center gap-3">
                   <Mail className="h-5 w-5 text-yellow-400" />
-                  info@goldtrade.sk
+                  obbsro@yahoo.com
                 </span>
                 <ArrowRight className="h-4 w-4 opacity-0 transition group-hover:opacity-100" />
               </a>
