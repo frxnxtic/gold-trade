@@ -8,7 +8,7 @@ import Link from "next/link";
 const flats = {
     "1np": [
       {
-        id: 101,
+        id: 102,
         title: "Byt 101 – 3 izby, 88.35 m²",
         top: "11%",
         left: "3%",
@@ -17,7 +17,7 @@ const flats = {
         color: "bg-purple-300/30 hover:bg-purple-300/50 border-purple-500",
       },
       {
-        id: 102,
+        id: 101,
         title: "Byt 102 – 2 izby, 51.34 m²",
         top: "17%",
         left: "31%",
