@@ -170,6 +170,17 @@ export default async function Home() {
                 <ArrowRight className="h-4 w-4 opacity-0 transition group-hover:opacity-100" />
               </a>
 
+                <a
+                    href="tel:+421903545924"
+                    className="group inline-flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-4 py-3 transition hover:bg-white/10"
+                >
+                <span className="inline-flex items-center gap-3">
+                  <Phone className="h-5 w-5 text-yellow-400" />
+                  +421&nbsp;903&nbsp;545&nbsp;924
+                </span>
+                    <ArrowRight className="h-4 w-4 opacity-0 transition group-hover:opacity-100" />
+                </a>
+
               <a
                 href="mailto:obbsro@yahoo.com"
                 className="group inline-flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-4 py-3 transition hover:bg-white/10"
