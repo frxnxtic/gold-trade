@@ -40,7 +40,7 @@ export default function FlatCatalogSlider({ flats }: Props) {
   return (
   <div className="relative bg-[#f9f9f9] pt-4 px-4 pb-6 rounded-xl border-t border-gray-300 mt-6">
     <div className="flex justify-between items-center mb-4">
-      <h3 className="text-xl font-bold text-black">Vybrané byty</h3>
+      <h3 className="text-xl font-bold text-black"></h3>
       <div className="flex gap-2">
         <button
           onClick={prev}

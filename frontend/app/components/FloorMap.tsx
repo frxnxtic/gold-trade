@@ -127,7 +127,14 @@ export default function FloorMap() {
 
   return (
     <section id="katalog" className="bg-white text-black px-6 md:px-16 py-16">
-      <h2 className="text-3xl font-bold mb-6 text-center">Pôdorys bytov</h2>
+  {/* Heading */}
+  <div className="text-center mb-8">
+    <p className="uppercase text-s tracking-[0.28em] text-gray-400">katalóg bytov</p>
+    <h2 className="mt-2 text-3xl md:text-4xl font-bold tracking-tight">
+      Pôdorys bytov
+    </h2>
+    <span className="mt-4 inline-block h-[2px] w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+  </div>
 
  {/* Кнопки этажей */}
   <div className="flex justify-center gap-4 mb-10">
@@ -163,44 +170,63 @@ export default function FloorMap() {
     blurDataURL={floors.find((f) => f.id === selectedFloor)?.blur}
   />
 
-  
-  {flats[selectedFloor].map((flat: Flat) => {
-  const isSold = flat.id === 110 || flat.id === 111;
+        {flats[selectedFloor].map((flat: Flat) => {
+        const isSold = flat.id === 110 || flat.id === 111;
 
-  return isSold ? (
-    <div
-      key={flat.id}
-      className={`absolute border transition ${flat.color} opacity-50 cursor-not-allowed flex items-center justify-center`}
-      style={{
-        top: flat.top,
-        left: flat.left,
-        width: flat.width,
-        height: flat.height,
-      }}
-      title={`${flat.title} – PREDANÝ`}
-    >
-      <span className="bg-black/70 text-white text-sm md:text-base px-2 py-1 rounded">
-        PREDANÝ
-      </span>
-    </div>
-  ) : (
-    <Link key={flat.id} href={`/detail/${flat.id}`}>
-      <div
-        className={`absolute border cursor-pointer transition ${flat.color} flex items-center justify-center`}
-        style={{
-          top: flat.top,
-          left: flat.left,
-          width: flat.width,
-          height: flat.height,
-        }}
-        title={flat.title}
-      >
-        <span className="bg-white/80 text-black text-sm md:text-base font-semibold px-2 py-1 rounded">
-          {flat.title.split("–")[1]?.trim()}
-        </span>
-      </div>
-    </Link>
-  );
+        const baseClasses =
+          "absolute border rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50";
+
+        const stateClasses = isSold
+          ? "opacity-60 cursor-not-allowed"
+          : "cursor-pointer hover:scale-[1.01]";
+
+        const labelBase =
+          "pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap";
+
+        return isSold ? (
+          <div
+            key={flat.id}
+            className={`${baseClasses} ${flat.color} ${stateClasses}`}
+            style={{
+              top: flat.top,
+              left: flat.left,
+              width: flat.width,
+              height: flat.height
+            }}
+            title={`${flat.title} – PREDANÝ`}
+            aria-label={`${flat.title} – predaný`}
+          >
+            {/* chip PREDANÝ */}
+            <span
+              className={`${labelBase} bg-rose-600 text-white text-xs md:text-sm font-semibold px-2.5 py-1 rounded-full shadow`}
+            >
+              PREDANÝ
+            </span>
+          </div>
+        ) : (
+          <Link
+            key={flat.id}
+            href={`/detail/${flat.id}`}
+            aria-label={flat.title}
+            className="outline-none"
+          >
+            <div
+              className={`${baseClasses} ${flat.color} ${stateClasses}`}
+              style={{
+                top: flat.top,
+                left: flat.left,
+                width: flat.width,
+                height: flat.height
+              }}
+              title={flat.title}
+            >
+              {/* center label: izby + rozloha если есть во `title` */}
+              <span className={`${labelBase} bg-white/85 backdrop-blur px-2.5 py-1 rounded-md text-xs md:text-sm font-semibold text-black shadow`}>
+                {flat.title.split("–")[1]?.trim() ?? flat.title}
+              </span>
+            </div>
+          </Link>
+        );
 })}
 
 </div>
