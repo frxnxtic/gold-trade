@@ -94,7 +94,7 @@ const flats = {
       },
       {
         id: 108,
-        title: "Byt 303 – 2 izby, 63.51 m²",
+        title: "Byt 303 – 2 izby, 46.17 m²",
          top: "17%",
         left: "53.5%",
         width: "24%",
@@ -103,7 +103,7 @@ const flats = {
       },
       {
         id: 109,
-        title: "Byt 304 – 3 izby, 84.40 m²",
+        title: "Byt 304 – 3 izby, 63.72 m²",
         top: "10%",
         left: "77%",
         width: "19%",
