@@ -203,7 +203,7 @@
     "cenaWithoutDPH": "241 562,00 €",
     "poschodie": 3,
     "izby": 3,
-    "rozloha": "63.72",
+    "rozloha": "Obytna plocha: 63.72",
     "status": "volne",
    
     "images": [
@@ -218,7 +218,8 @@
       "Izba: 12.91 m2",
       "Izba: 9.04 m2",
       "Pivnica: 14.19 m2",
-      "Balkon: 6.49 m2"
+      "Balkon: 6.49 m2",
+      "Celkova plocha: 84,4 m2"
     ]
   }
 ]
