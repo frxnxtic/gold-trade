@@ -7,7 +7,7 @@
     "cenaWithoutDPH": "173 970,00 €",
     "poschodie": 1,
     "izby": 2,
-    "rozloha": "Celkova plocha: 59.32m2",
+    "rozloha": "Celkova plocha: 59.32",
     "status": "volne",
     "images": [
        "/images/flats/101-0.jpg",
@@ -31,7 +31,7 @@
 "cenaWithDPH": "369 782,28 €",
     "cenaWithoutDPH": "300 636,00 €",    "poschodie": 1,
     "izby": 3,
-    "rozloha": "Celkova plocha: 103.13m2",
+    "rozloha": "Celkova plocha: 103.13",
     "status": "volne",
      "images": [
       "/images/flats/102-0.jpg",
@@ -61,7 +61,7 @@
     "cenaWithoutDPH": "234 345,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "Celkova plocha: 77.40m2 ",
+    "rozloha": "Celkova plocha: 77.40 ",
     "status": "volne",
     "images": [
 
@@ -87,7 +87,7 @@
     "cenaWithoutDPH": "194 721,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "Celkova plocha: 67.99m2",
+    "rozloha": "Celkova plocha: 67.99",
     "status": "volne",
      "images": [
             "/images/flats/105-0.jpg",
@@ -111,7 +111,7 @@
     "cenaWithoutDPH": "308 661,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "Celkova plocha: 106.10m2 ",
+    "rozloha": "Celkova plocha: 106.10 ",
     "status": "volne",
     "images": [
       "/images/flats/104-0.jpg",
@@ -138,7 +138,7 @@
     "cenaWithoutDPH": "177 301,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "Celkova plocha: 62.31m2 ",
+    "rozloha": "Celkova plocha: 62.31 ",
     "status": "volne",
     "images": [
       "/images/flats/107-0.jpg",
@@ -161,7 +161,7 @@
 "cenaWithDPH": "264 850,98 €",
     "cenaWithoutDPH": "215 326,00 €",    "poschodie": 2,
     "izby": 3,
-    "rozloha": "Celkova plocha: 74.96m2",
+    "rozloha": "Celkova plocha: 74.96",
     "status": "volne",
     
     "images": [
@@ -188,7 +188,7 @@
 "cenaWithDPH": "217 109,76 €",
     "cenaWithoutDPH": "176 512,00 €",    "poschodie": 3,
     "izby": 2,
-    "rozloha": "Celkova plocha: 61.89m2",
+    "rozloha": "Celkova plocha: 61.89",
     "status": "volne",
      "images": [
         "/images/flats/109-0.jpg",
@@ -212,7 +212,7 @@
     "cenaWithoutDPH": "241 562,00 €",
     "poschodie": 3,
     "izby": 3,
-    "rozloha": "Celkova plocha: 84,4 m2",
+    "rozloha": "Celkova plocha: 84,4 ",
     "status": "volne",
    
     "images": [
