@@ -7,7 +7,7 @@
     "cenaWithoutDPH": "173 970,00 €",
     "poschodie": 1,
     "izby": 2,
-    "rozloha": "51.34",
+    "rozloha": "Celkova plocha: 59.32m2",
     "status": "volne",
     "images": [
        "/images/flats/101-0.jpg",
@@ -19,7 +19,8 @@
       "Obývacia izba s kuchyňou: 24.66 m2",
       "Izba: 17.93 m2",
       "Kúpeľňa s WC: 5.49 m2",      
-      "Pivnica: 7.98 m2"
+      "Pivnica: 7.98 m2",
+      "Obytna plocha: 51.34m2"
       
     ]
   },
@@ -30,7 +31,7 @@
 "cenaWithDPH": "369 782,28 €",
     "cenaWithoutDPH": "300 636,00 €",    "poschodie": 1,
     "izby": 3,
-    "rozloha": "88.35",
+    "rozloha": "Celkova plocha: 103.13m2",
     "status": "volne",
      "images": [
       "/images/flats/102-0.jpg",
@@ -47,7 +48,8 @@
       "Izba: 13.17 m2",
       "Obývacia izba s kuchyňou: 34.69 m2",
       "Pivnica: 7.96 m2",
-      "Balkon: 6.82 m2"
+      "Balkon: 6.82 m2",
+      "Obytna plocha: 88.35m2"
 
     ]
   },
@@ -59,7 +61,7 @@
     "cenaWithoutDPH": "234 345,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "69.44",
+    "rozloha": "Celkova plocha: 77.40m2 ",
     "status": "volne",
     "images": [
 
@@ -72,7 +74,8 @@
       "Kúpeľňa s WC: 5.59 m2",
       "Obývacia izba s kuchyňou: 43.77 m2",
       "Izba: 14.82 m2",
-      "Pivnica: 7.96 m2"
+      "Pivnica: 7.96 m2",
+      "Obytna plocha: 69.44m2"
       
     ]
   },
@@ -84,7 +87,7 @@
     "cenaWithoutDPH": "194 721,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "52.22",
+    "rozloha": "Celkova plocha: 67.99m2",
     "status": "volne",
      "images": [
             "/images/flats/105-0.jpg",
@@ -96,7 +99,8 @@
       "Obývacia izba s kuchyňou: 24.86 m2",
       "Izba: 18.26 m2",
       "Pivnica: 8.95 m2",
-      "Balkon: 6.82 m2"
+      "Balkon: 6.82 m2",
+      "Obytna plocha:  52.22m2"
     ]
   },
   {
@@ -107,7 +111,7 @@
     "cenaWithoutDPH": "308 661,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "89.43",
+    "rozloha": "Celkova plocha: 106.10m2 ",
     "status": "volne",
     "images": [
       "/images/flats/104-0.jpg",
@@ -122,7 +126,8 @@
       "Izba: 12.17 m2",
       "Komora: 3.4 m2",
       "Pivnica: 9.85 m2",
-      "Balkon: 6.82 m2"
+      "Balkon: 6.82 m2",
+      "Obytna plocha: 89.43m2"
     ]
   },
   {
@@ -133,7 +138,7 @@
     "cenaWithoutDPH": "177 301,00 €",   
      "poschodie": 2,
     "izby": 2,
-    "rozloha": "45.78",
+    "rozloha": "Celkova plocha: 62.31m2 ",
     "status": "volne",
     "images": [
       "/images/flats/107-0.jpg",
@@ -145,7 +150,8 @@
       "Obývacia izba s kuchyňou: 20.60 m2",
       "Izba: 13,61 m2",
       "Pivnica: 9.71 m2",
-      "Balkon: 6.82 m2"
+      "Balkon: 6.82 m2",
+      "Obytna plocha: 45.78m2"
     ]
   },
   {
@@ -155,7 +161,7 @@
 "cenaWithDPH": "264 850,98 €",
     "cenaWithoutDPH": "215 326,00 €",    "poschodie": 2,
     "izby": 3,
-    "rozloha": "58.58",
+    "rozloha": "Celkova plocha: 74.96m2",
     "status": "volne",
     
     "images": [
@@ -170,7 +176,9 @@
       "Izba: 8.39 m2",
       "Izba: 9,43 m2",
       "Pivnica: 9.56 m2",
-      "Balkon: 6.82 m2"
+      "Balkon: 6.82 m2",
+      "Obytna plocha:  58.58m2"
+
     ]
   },
   {
@@ -180,7 +188,7 @@
 "cenaWithDPH": "217 109,76 €",
     "cenaWithoutDPH": "176 512,00 €",    "poschodie": 3,
     "izby": 2,
-    "rozloha": "46.17",
+    "rozloha": "Celkova plocha: 61.89m2",
     "status": "volne",
      "images": [
         "/images/flats/109-0.jpg",
@@ -192,7 +200,8 @@
       "Obývacia izba s kuchyňou: 21.00 m2",
       "Izba: 15.18 m2",
       "Pivnica: 9.23 m2",
-      "Balkon: 6.49 m2"
+      "Balkon: 6.49 m2",
+      "Obytna plocha: 46.17m2"
     ]
   },
   {
@@ -203,7 +212,7 @@
     "cenaWithoutDPH": "241 562,00 €",
     "poschodie": 3,
     "izby": 3,
-    "rozloha": "Obytna plocha: 63.72",
+    "rozloha": "Celkova plocha: 84,4 m2",
     "status": "volne",
    
     "images": [
@@ -219,7 +228,7 @@
       "Izba: 9.04 m2",
       "Pivnica: 14.19 m2",
       "Balkon: 6.49 m2",
-      "Celkova plocha: 84,4 m2"
+      "Obytna plocha: 63.72"
     ]
   }
 ]
