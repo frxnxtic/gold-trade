@@ -164,8 +164,9 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                   <p key={i}><strong className="text-white">{item}</strong></p>
                 ))}
               <p className="text-white text-2xl font-bold pt-4">{flat.rozloha} m²</p>
-              <p className="text-white text-2xl font-bold"> {flat.cenaWithDPH}</p>
-              <p className="text-white text-1xl"><span className="text-sm font-normal ml-2 text-yellow-300">bez DPH: </span>{flat.cenaWithoutDPH}</p>
+              <p className="text-white text-2xl font-bold"><span className="text-sm font-normal ml-2 text-yellow-300">Bez DPH: </span>{flat.cenaWithoutDPH}</p>
+              <p className="text-white text-2xl font-bold"><span className="text-sm font-normal ml-2 text-yellow-300">S DPH: </span> {flat.cenaWithDPH}</p>
+              
 
             </div>
           </div>
