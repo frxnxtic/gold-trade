@@ -74,14 +74,15 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
 </Link>
               {!showModal && (
           <div className="relative z-20 flex justify-center pt-10 mb-10">
-              <Link href="/"></Link>
-              <img
-    src="/LOGO.png"
-    alt="GOLD TRADE Logo"
-    className="h-30 w-auto object-contain drop-shadow-[0_0_25px_#FFD700] 
-               transition-transform duration-300 hover:scale-110 
-               hover:drop-shadow-[0_0_35px_#FFD700]"
-  />
+              <Link href="/">
+                      <img
+            src="/LOGO.png"
+            alt="GOLD TRADE Logo"
+            className="h-30 w-auto object-contain drop-shadow-[0_0_25px_#FFD700]
+                       transition-transform duration-300 hover:scale-110
+                       hover:drop-shadow-[0_0_35px_#FFD700]"
+          />
+            </Link>
 
 
 </div>
@@ -128,13 +129,13 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                 />
               )}
 
-              <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-black w-10 h-10 flex items-center justify-center rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
+              <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-yellow w-10 h-10 flex items-center justify-center rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="yellow">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-black w-10 h-10 flex items-center justify-center rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="white">
+              <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-yellow w-10 h-10 flex items-center justify-center rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="yellow">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
