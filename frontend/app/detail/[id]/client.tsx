@@ -52,7 +52,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
   const modalPrev = () => setModalImageIndex((prev) => (prev - 1 + images.length) % images.length);
   const modalNext = () => setModalImageIndex((prev) => (prev + 1) % images.length);
 
-  const dalsieByty = allFlats.filter(f => f.id !== flat.id).slice(0, 3);
+  const dalsieByty = allFlats.filter(f => f.poschodie === flat.poschodie && f.id !== flat.id).slice(0, 3);
 
   return (
     <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen relative overflow-hidden">

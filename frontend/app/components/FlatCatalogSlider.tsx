@@ -39,25 +39,25 @@ export default function FlatCatalogSlider({ flats }: Props) {
 
   return (
   <div className="relative bg-[#f9f9f9] pt-4 px-4 pb-6 rounded-xl border-t border-gray-300 mt-6">
-    <div className="flex justify-between items-center mb-4">
-      <h3 className="text-xl font-bold text-black"></h3>
-      <div className="flex gap-2">
-        <button
-          onClick={prev}
-          disabled={startIndex === 0}
-          className="px-3 py-1 rounded bg-gray-300 text-sm font-semibold hover:shadow-xl hover:-translate-y-0.5 transition"
-        >
-          ← Predchádzajúce
-        </button>
-        <button
-          onClick={next}
-          disabled={startIndex + visibleCount >= flats.length}
-          className="px-3 py-1 rounded bg-gray-300 text-sm font-semibold hover:shadow-xl hover:-translate-y-0.5 transition"
-        >
-          Nasledujúce →
-        </button>
-      </div>
-    </div>
+    {/*<div className="flex justify-between items-center mb-4">*/}
+    {/*  <h3 className="text-xl font-bold text-black"></h3>*/}
+    {/*  <div className="flex gap-2">*/}
+    {/*    /!*<button*!/*/}
+    {/*    /!*  onClick={prev}*!/*/}
+    {/*    /!*  disabled={startIndex === 0}*!/*/}
+    {/*    /!*  className="px-3 py-1 rounded bg-gray-300 text-sm font-semibold hover:shadow-xl hover:-translate-y-0.5 transition"*!/*/}
+    {/*    /!*>*!/*/}
+    {/*    /!*  ← Predchádzajúce*!/*/}
+    {/*    /!*</button>*!/*/}
+    {/*    /!*<button*!/*/}
+    {/*    /!*  onClick={next}*!/*/}
+    {/*    /!*  disabled={startIndex + visibleCount >= flats.length}*!/*/}
+    {/*    /!*  className="px-3 py-1 rounded bg-gray-300 text-sm font-semibold hover:shadow-xl hover:-translate-y-0.5 transition"*!/*/}
+    {/*    /!*>*!/*/}
+    {/*    /!*  Nasledujúce →*!/*/}
+    {/*    /!*</button>*!/*/}
+    {/*  </div>*/}
+    {/*</div>*/}
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {visibleFlats.map((flat) => (

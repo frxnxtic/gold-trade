@@ -18,7 +18,7 @@ export default function FlatRotator({ flats }: { flats: Flat[] }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % flats.length);
-    }, 30000); // 30 секунд
+    }, 30000);
 
     return () => clearInterval(interval);
   }, [flats.length]);
