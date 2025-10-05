@@ -157,7 +157,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
               <p><strong className="text-white">Izby:</strong> {flat.izby}</p>
               {flat.popis
                 .sort((a, b) => {
-                  const order = ["Obytna plocha, Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba"];
+                  const order = ["Obytna plocha", "Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba"];
                   const indexA = order.findIndex(x => a.includes(x));
                   const indexB = order.findIndex(x => b.includes(x));
                   return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
