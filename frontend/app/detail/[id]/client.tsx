@@ -125,12 +125,12 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                 />
               )}
 
-              <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-white w-10 h-10 flex items-center justify-center rounded-full">
+              <button onClick={prev} className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-black w-10 h-10 flex items-center justify-center rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-white w-10 h-10 flex items-center justify-center rounded-full">
+              <button onClick={next} className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-black/90 transition text-black w-10 h-10 flex items-center justify-center rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
