@@ -116,7 +116,7 @@ export default async function Home() {
     </div>
   </div>
 
-  <FlatCatalogSlider flats={flats} />
+  {/*<FlatCatalogSlider flats={flats} />*/}
 </section>
 
 
