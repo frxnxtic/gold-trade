@@ -79,7 +79,7 @@ export default function FlatCatalogSlider({ flats }: Props) {
             <h4 className="text-lg font-semibold text-gray-800 mb-1">{flat.nazov}</h4>
             <p className="text-sm text-gray-600">{flat.adresa}</p>
             <div className="text-sm text-gray-700 mt-2">
-              {flat.izby} izby • {flat.rozloha} m² • {flat.poschodie}. NP
+              {flat.izby} izby • {flat.rozloha} • {flat.poschodie}. NP
             </div>
 
            <div className="mt-4 pt-3 border-t border-gray-200 space-y-1">
