@@ -175,7 +175,6 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
         </div>
 
         <hr className="border-t border-yellow-500 opacity-20 mx-auto w-3/4 mt-16 mb-6" />
-
         {/* Dalsie byty */}
         <div className="max-w-6xl mx-auto px-6 mt-12">
           <h3 className="text-2xl font-semibold text-yellow-400 mb-4 text-center">Ďalšie byty na {flat.poschodie}. poschodí</h3>
