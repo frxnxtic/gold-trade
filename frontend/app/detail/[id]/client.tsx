@@ -61,7 +61,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
 
         {/* Кнопка "Späť na hlavnú stránku" по центру */}
         <Link
-  href="/"
+  href="/#katalog"
   className="fixed top-15 left-6 z-[2000] flex items-center gap-2
              border border-yellow-400 text-yellow-400 font-medium
              px-4 py-2 rounded-full shadow-md
@@ -190,7 +190,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                    className="w-full aspect-square object-cover rounded-lg"
                 />
                 <h4 className="text-lg text-yellow-400 font-bold mt-2">{byt.nazov}</h4>
-                <p className="text-gray-300 text-sm">{byt.rozloha} m² — {byt.izby} izby</p>
+                <p className="text-gray-300 text-sm">{byt.rozloha} — {byt.izby} izby</p>
                 <p className="text-white text-sm font-semibold">{byt.cenaWithDPH || 'Cena nedostupná'}</p>
               </Link>
             ))}
