@@ -108,13 +108,13 @@ export default async function Home() {
   <FloorMap />
 
   {/* Разделитель — с минимальным отступом */}
-  <div className="mt-1 mb-1 border-t border-gray-200">
-    <div className="text-center -mt-3">
-      <span className="inline-block bg-white px-3 text-xs text-gray-400 uppercase tracking-widest">
-        Vybrané byty
-      </span>
-    </div>
-  </div>
+  {/*<div className="mt-1 mb-1 border-t border-gray-200">*/}
+  {/*  <div className="text-center -mt-3">*/}
+  {/*    <span className="inline-block bg-white px-3 text-xs text-gray-400 uppercase tracking-widest">*/}
+  {/*      Vybrané byty*/}
+  {/*    </span>*/}
+  {/*  </div>*/}
+  {/*</div>*/}
 
   {/*<FlatCatalogSlider flats={flats} />*/}
 </section>
