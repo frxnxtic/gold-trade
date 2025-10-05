@@ -245,16 +245,16 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
     </div>
   </div>
 )}
- <footer className="mt-auto w-full border-t border-yellow-600/30 text-gray-300 bg-black">
-  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-6 gap-4">
-    {/* GOLD TRADE слева */}
-    <div className="text-yellow-400 font-bold text-xl tracking-wide border border-yellow-400 px-5 py-2 rounded-full shadow-md">
-      GOLD TRADE
-    </div>
+{/* <footer className="mt-auto w-full border-t border-yellow-600/30 text-gray-300 bg-black">*/}
+{/*  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 py-6 gap-4">*/}
+{/*    /!* GOLD TRADE слева *!/*/}
+{/*    <div className="text-yellow-400 font-bold text-xl tracking-wide border border-yellow-400 px-5 py-2 rounded-full shadow-md">*/}
+{/*      GOLD TRADE*/}
+{/*    </div>*/}
 
-    
-  </div>
-</footer>
+{/*    */}
+{/*  </div>*/}
+{/*</footer>*/}
 
     
       </div>
