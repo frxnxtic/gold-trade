@@ -54,6 +54,8 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
 
   const dalsieByty = allFlats.filter(f => f.poschodie === flat.poschodie && f.id !== flat.id).slice(0, 3);
 
+  console.log(dalsieByty);
+
   return (
     <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white min-h-screen relative overflow-hidden">
 
