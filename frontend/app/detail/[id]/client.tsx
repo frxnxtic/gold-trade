@@ -165,7 +165,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                 .map((item, i) => (
                   <p key={i}><strong className="text-white">{item}</strong></p>
                 ))}
-              <p className="text-white text-2xl font-bold pt-4">{flat.rozloha} m²</p>
+              <p className="text-white text-2xl font-bold pt-4">{flat.rozloha}</p>
               <p className="text-white text-2xl font-bold"><span className="text-sm font-normal ml-2 text-yellow-300">Bez DPH: </span>{flat.cenaWithoutDPH}</p>
               <p className="text-white text-2xl font-bold"><span className="text-sm font-normal ml-2 text-yellow-300">S DPH: </span> {flat.cenaWithDPH}</p>
               
@@ -178,7 +178,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
 
         {/* Dalsie byty */}
         <div className="max-w-6xl mx-auto px-6 mt-12">
-          <h3 className="text-2xl font-semibold text-yellow-400 mb-4 text-center">Ďalšie byty</h3>
+          <h3 className="text-2xl font-semibold text-yellow-400 mb-4 text-center">Ďalšie byty na {flat.poschodie}. poschodí</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-35">
             {dalsieByty.map(byt => (
               <Link key={byt.id} href={`/detail/${byt.id}`} className="bg-[#1e1e1e] p-4 rounded-xl hover:bg-[#2a2a2a] transition shadow-lg">
