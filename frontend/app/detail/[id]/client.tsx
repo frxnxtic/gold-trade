@@ -170,7 +170,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                         </tr>
                         {/* Типы помещений по порядку */}
                         {
-                            ["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba, WC"].map(type =>
+                            ["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba", "WC"].map(type =>
                                     flat.popis.some(item => item.includes(type)) && (
                                         <tr key={type}>
                                             <td className="text-white font-semibold py-1 pr-4 text-left">{type}:</td>
