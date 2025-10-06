@@ -170,7 +170,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                         </tr>
                         {/* Типы помещений по порядку */}
                         {
-                            ["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba", "WC"].map(type =>
+                            ["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba", "WC", "Komora"].map(type =>
                                     flat.popis.some(item => item.includes(type)) && (
                                         <tr key={type}>
                                             <td className="text-white font-semibold py-1 pr-4 text-left">{type}:</td>
@@ -193,11 +193,11 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                     {/* Obytná plocha */}
                     {flat.popis.some(item => item.includes("Obytná plocha")) && (
                         <div className="flex justify-between items-center mt-2">
-                            <span className="text-white font-semibold">Obytná plocha:</span>
-                            <span><span>{flat.popis.find(item => item.includes("Obytná plocha"))?.split(':')[1] ?? ''}</span>
-</span>
+                            <span className="text-white font-bold">Obytná plocha:</span>
+                            <span><span>{flat.popis.find(item => item.includes("Obytná plocha"))?.split(':')[1] ?? ''}</span></span>
                         </div>
                     )}
+                    <hr className="border-yellow-400 my-3" />
                     {/* Balkón и Пивница */}
                     {["Balkón", "Pivnica"].map(key =>
                             flat.popis.some(item => item.includes(key)) && (
@@ -210,7 +210,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                     {/* Остальные параметры */}
                     {flat.popis
                         .filter(item =>
-                            !["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba", "WC", "Obytná plocha", "Balkón", "Pivnica"].some(key => item.includes(key))
+                            !["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba", "WC", "Komora", "Obytná plocha", "Balkón", "Pivnica"].some(key => item.includes(key))
                         )
                         .map((item, i) => (
                             <div className="flex justify-between items-center mt-2" key={i}>
