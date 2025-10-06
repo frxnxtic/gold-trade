@@ -153,29 +153,80 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
           </div>
 
           {/* Info block */}
-          <div className="text-center md:text-left">
-            <h1 className="text-3xl font-bold text-yellow-400 mb-4">{flat.nazov}</h1>
+            <div className="text-center md:text-left">
+                <h1 className="text-3xl font-bold text-yellow-400 mb-4">{flat.nazov}</h1>
 
-            <div className="text-gray-300 space-y-2 mt-6 text-base">
-              <p><strong className="text-white">Poschodie:</strong> {flat.poschodie}</p>
-              <p><strong className="text-white">Izby:</strong> {flat.izby}</p>
-              {flat.popis
-                .sort((a, b) => {
-                  const order = ["Obytná plocha", "Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba"];
-                  const indexA = order.findIndex(x => a.includes(x));
-                  const indexB = order.findIndex(x => b.includes(x));
-                  return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
-                })
-                .map((item, i) => (
-                  <p key={i}><strong className="text-white">{item}</strong></p>
-                ))}
-              <p className="text-white text-2xl font-bold pt-4">{flat.rozloha}</p>
-              <p className="text-white text-2xl font-bold"><span className="text-sm font-normal ml-2 text-yellow-300">Bez DPH: </span>{flat.cenaWithoutDPH}</p>
-              <p className="text-white text-2xl font-bold"><span className="text-sm font-normal ml-2 text-yellow-300">S DPH: </span> {flat.cenaWithDPH}</p>
-              
+                <div className="text-gray-300 mt-6 text-base max-w-lg mx-auto">
+                    <table className="w-full mb-2">
+                        <tbody>
+                        {/* Izby и Poschodie первыми */}
+                        <tr>
+                            <td className="text-white font-semibold py-1 pr-4 text-left w-1/2">Izby:</td>
+                            <td className="text-right">{flat.izby}</td>
+                        </tr>
+                        <tr>
+                            <td className="text-white font-semibold py-1 pr-4 text-left">Poschodie:</td>
+                            <td className="text-right">{flat.poschodie}</td>
+                        </tr>
+                        {/* Типы помещений по порядку */}
+                        {
+                            ["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba"].map(type =>
+                                    flat.popis.some(item => item.includes(type)) && (
+                                        <tr key={type}>
+                                            <td className="text-white font-semibold py-1 pr-4 text-left">{type}:</td>
+                                            <td className="text-right">{flat.popis.find(item => item.includes(type)).split(':')[1]}</td>
+                                        </tr>
+                                    )
+                            )
+                        }
+                        </tbody>
+                    </table>
+                    <hr className="border-yellow-400 my-3" />
+                    {/* Obytná plocha */}
+                    {flat.popis.some(item => item.includes("Obytná plocha")) && (
+                        <div className="flex justify-between items-center mt-2">
+                            <span className="text-white font-semibold">Obytná plocha:</span>
+                            <span>{flat.popis.find(item => item.includes("Obytná plocha")).split(':')[1]}</span>
+                        </div>
+                    )}
+                    {/* Balkón и Пивница */}
+                    {["Balkón", "Pivnica"].map(key =>
+                            flat.popis.some(item => item.includes(key)) && (
+                                <div className="flex justify-between items-center mt-2" key={key}>
+                                    <span className="text-white font-semibold">{key}:</span>
+                                    <span>{flat.popis.find(item => item.includes(key)).split(':')[1]}</span>
+                                </div>
+                            )
+                    )}
+                    {/* Остальные параметры */}
+                    {flat.popis
+                        .filter(item =>
+                            !["Obývacia izba s kuchyňou", "Izba", "Kúpeľňa", "Chodba", "Obytná plocha", "Balkón", "Pivnica"].some(key => item.includes(key))
+                        )
+                        .map((item, i) => (
+                            <div className="flex justify-between items-center mt-2" key={i}>
+                                <span className="text-white font-semibold">{item.split(':')[0]}:</span>
+                                <span>{item.split(':')[1]}</span>
+                            </div>
+                        ))
+                    }
 
+                    {/* Цена и площадь */}
+                    <div className="flex justify-between items-center mt-5">
+                        <span className="text-white text-xl font-bold">Rozloha:</span>
+                        <span className="text-2xl font-bold">{flat.rozloha}</span>
+                    </div>
+                    <div className="flex justify-between items-center mt-2">
+                        <span className="text-yellow-300 text-sm font-normal">Bez DPH:</span>
+                        <span className="text-white text-2xl font-bold">{flat.cenaWithoutDPH}</span>
+                    </div>
+                    <div className="flex justify-between items-center mt-2">
+                        <span className="text-yellow-300 text-sm font-normal">S DPH: </span>
+                        <span className="text-white text-2xl font-bold">{flat.cenaWithDPH}</span>
+                    </div>
+                </div>
             </div>
-          </div>
+
         </div>
 
         <hr className="border-t border-yellow-500 opacity-20 mx-auto w-3/4 mt-16 mb-6" />
