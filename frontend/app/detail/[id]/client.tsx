@@ -203,7 +203,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                             flat.popis.some(item => item.includes(key)) && (
                                 <div className="flex justify-between items-center mt-2" key={key}>
                                     <span className="text-white font-semibold">{key}:</span>
-                                    <span>{flat.popis.find(item => item.split(':')[1])}</span>
+                                    <span>{flat.popis.find(item => item.includes(key))?.split(':')[1] ?? ''}</span>
                                 </div>
                             )
                     )}
