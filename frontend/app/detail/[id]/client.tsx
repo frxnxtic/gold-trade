@@ -194,7 +194,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                     {flat.popis.some(item => item.includes("Obytná plocha")) && (
                         <div className="flex justify-between items-center mt-2">
                             <span className="text-white font-semibold">Obytná plocha:</span>
-                            <span>{flat.popis.find(item => item.split(':')[1])}</span>
+                            <span>{flat.popis.find(item => item.includes("Obytná plocha").split(':')[1])}</span>
                         </div>
                     )}
                     {/* Balkón и Пивница */}
@@ -221,7 +221,6 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
 
                     {/* Цена и площадь */}
                     <div className="flex justify-between items-center mt-5">
-                        <span className="text-white text-xl font-bold">Rozloha:</span>
                         <span className="text-2xl font-bold">{flat.rozloha}</span>
                     </div>
                     <div className="flex justify-between items-center mt-2">
