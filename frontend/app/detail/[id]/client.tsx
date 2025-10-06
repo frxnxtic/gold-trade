@@ -174,7 +174,15 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                                     flat.popis.some(item => item.includes(type)) && (
                                         <tr key={type}>
                                             <td className="text-white font-semibold py-1 pr-4 text-left">{type}:</td>
-                                            <td className="text-right">{flat.popis.find(item => item.includes(type)).split(':')[1]}</td>
+                                            <td className="text-right">
+                                                {
+                                                    (() => {
+                                                        const found = flat.popis.find(item => item.includes(type));
+                                                        return found ? found.split(':')[1] : '';
+                                                    })()
+                                                }
+                                            </td>
+
                                         </tr>
                                     )
                             )
@@ -186,7 +194,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                     {flat.popis.some(item => item.includes("Obytná plocha")) && (
                         <div className="flex justify-between items-center mt-2">
                             <span className="text-white font-semibold">Obytná plocha:</span>
-                            <span>{flat.popis.find(item => item.includes("Obytná plocha")).split(':')[1]}</span>
+                            <span>{flat.popis.find(item => item.split(':')[1])}</span>
                         </div>
                     )}
                     {/* Balkón и Пивница */}
@@ -194,7 +202,7 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
                             flat.popis.some(item => item.includes(key)) && (
                                 <div className="flex justify-between items-center mt-2" key={key}>
                                     <span className="text-white font-semibold">{key}:</span>
-                                    <span>{flat.popis.find(item => item.includes(key)).split(':')[1]}</span>
+                                    <span>{flat.popis.find(item => item.split(':')[1])}</span>
                                 </div>
                             )
                     )}
