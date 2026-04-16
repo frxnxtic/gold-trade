@@ -128,30 +128,6 @@
     ]
   },
   {
-    "id": 106,
-    "nazov": "Byt B6",
-    "adresa": "2. NP",
-    "cenaWithDPH": "218 080,23 €",
-    "cenaWithoutDPH": "177 301,00 €",
-    "poschodie": 2,
-    "izby": 2,
-    "rozloha": "Celková plocha: 62,31 m²",
-    "status": "voľný",
-    "images": [
-      "/images/flats/107-0.jpg",
-      "/images/flats/107-1.jpg"
-    ],
-    "popis": [
-      "Chodba: 5,88 m²",
-      "Kúpeľňa s WC: 5,69 m²",
-      "Obývacia izba s kuchyňou: 20,60 m²",
-      "Izba: 13,61 m²",
-      "Pivnica: 9,71 m²",
-      "Balkón: 6,82 m²",
-      "Obytná plocha: 45,78 m²"
-    ]
-  },
-  {
     "id": 107,
     "nazov": "Byt B7",
     "adresa": "2. NP",
