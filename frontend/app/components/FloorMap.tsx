@@ -171,7 +171,7 @@ export default function FloorMap() {
   />
 
         {flats[selectedFloor].map((flat: Flat) => {
-        const isSold = flat.id === 110 || flat.id === 111;
+        const isSold = flat.id === 110 || flat.id === 111 || flat.id === 106;
 
         const baseClasses =
           "absolute border rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50";
