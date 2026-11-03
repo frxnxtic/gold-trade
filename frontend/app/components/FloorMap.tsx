@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { getFlatStatus, STATUS_LABEL } from "../data/flatStatus";
 
 // flats нужно объявить перед компонентом, чтобы использовать его тип
 const flats = {
@@ -171,63 +172,79 @@ export default function FloorMap() {
   />
 
         {flats[selectedFloor].map((flat: Flat) => {
-        const isSold = flat.id === 110 || flat.id === 111 || flat.id === 106 || flat.id === 109;
+          const status = getFlatStatus(flat.id);
+          const isSold = status === "predany";
+          const isReserved = status === "rezervovany";
 
-        const baseClasses =
-          "absolute border rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50";
+          const baseClasses =
+            "absolute border rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50";
 
-        const stateClasses = isSold
-          ? "opacity-60 cursor-not-allowed"
-          : "cursor-pointer hover:scale-[1.01]";
+          const stateClasses = isSold
+            ? "opacity-60 cursor-not-allowed"
+            : isReserved
+              ? "opacity-80 cursor-pointer hover:scale-[1.01]"
+              : "cursor-pointer hover:scale-[1.01]";
 
-        const labelBase =
-          "pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap";
+          const position = {
+            top: flat.top,
+            left: flat.left,
+            width: flat.width,
+            height: flat.height,
+          };
 
-        return isSold ? (
-          <div
-            key={flat.id}
-            className={`${baseClasses} ${flat.color} ${stateClasses}`}
-            style={{
-              top: flat.top,
-              left: flat.left,
-              width: flat.width,
-              height: flat.height
-            }}
-            title={`${flat.title} – PREDANÝ`}
-            aria-label={`${flat.title} – predaný`}
-          >
-            {/* chip PREDANÝ */}
-            <span
-              className={`${labelBase} bg-rose-600 text-white text-xs md:text-sm font-semibold px-2.5 py-1 rounded-full shadow`}
+          const labelBase =
+            "pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap";
+
+          const chipBase =
+            "text-xs md:text-sm font-semibold px-2.5 py-1 rounded-full shadow uppercase";
+
+          // Predaný – nedá sa kliknúť
+          if (isSold) {
+            return (
+              <div
+                key={flat.id}
+                className={`${baseClasses} ${flat.color} ${stateClasses}`}
+                style={position}
+                title={`${flat.title} – ${STATUS_LABEL.predany}`}
+                aria-label={`${flat.title} – ${STATUS_LABEL.predany.toLowerCase()}`}
+              >
+                <span className={`${labelBase} ${chipBase} bg-rose-600 text-white`}>
+                  {STATUS_LABEL.predany}
+                </span>
+              </div>
+            );
+          }
+
+          // Voľný alebo rezervovaný – detail sa dá otvoriť
+          const label = isReserved
+            ? `${flat.title} – ${STATUS_LABEL.rezervovany}`
+            : flat.title;
+
+          return (
+            <Link
+              key={flat.id}
+              href={`/detail/${flat.id}`}
+              aria-label={label}
+              className="outline-none"
             >
-              PREDANÝ
-            </span>
-          </div>
-        ) : (
-          <Link
-            key={flat.id}
-            href={`/detail/${flat.id}`}
-            aria-label={flat.title}
-            className="outline-none"
-          >
-            <div
-              className={`${baseClasses} ${flat.color} ${stateClasses}`}
-              style={{
-                top: flat.top,
-                left: flat.left,
-                width: flat.width,
-                height: flat.height
-              }}
-              title={flat.title}
-            >
-              {/* center label: izby + rozloha если есть во `title` */}
-              <span className={`${labelBase} bg-white/85 backdrop-blur px-2.5 py-1 rounded-md text-xs md:text-sm font-semibold text-black shadow`}>
-                {flat.title.split("–")[1]?.trim() ?? flat.title}
-              </span>
-            </div>
-          </Link>
-        );
-})}
+              <div
+                className={`${baseClasses} ${flat.color} ${stateClasses}`}
+                style={position}
+                title={label}
+              >
+                {isReserved ? (
+                  <span className={`${labelBase} ${chipBase} bg-amber-500 text-black`}>
+                    {STATUS_LABEL.rezervovany}
+                  </span>
+                ) : (
+                  <span className={`${labelBase} bg-white/85 backdrop-blur px-2.5 py-1 rounded-md text-xs md:text-sm font-semibold text-black shadow`}>
+                    {flat.title.split("–")[1]?.trim() ?? flat.title}
+                  </span>
+                )}
+              </div>
+            </Link>
+          );
+        })}
 
 </div>
 
