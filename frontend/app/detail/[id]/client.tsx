@@ -3,6 +3,13 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getFlatStatus, STATUS_LABEL, type FlatStatus } from '../../data/flatStatus';
+
+const STATUS_BADGE: Record<FlatStatus, string> = {
+  volny: 'bg-green-600 text-white',
+  rezervovany: 'bg-amber-500 text-black',
+  predany: 'bg-red-700 text-white',
+};
 
 type Flat = {
   id: number;
@@ -25,6 +32,7 @@ type Props = {
 
 export default function ClientDetailPage({ flat, allFlats }: Props) {
   const phone = '+421901910610';
+  const status = getFlatStatus(flat.id);
   const [images, setImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
@@ -106,12 +114,9 @@ export default function ClientDetailPage({ flat, allFlats }: Props) {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           {/* Slideshow */}
           <div className="col-span-1 md:col-span-2 flex flex-col items-center relative">
-            {flat.status === 'predane' && (
-              <div className="absolute top-2 left-2 bg-red-700 text-white text-xs px-2 py-1 font-bold rounded z-20">Predané</div>
-            )}
-            {flat.status === 'volne' && (
-              <div className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 font-bold rounded z-20">Voľný</div>
-            )}
+            <div className={`absolute top-2 left-2 ${STATUS_BADGE[status]} text-xs px-2 py-1 font-bold rounded z-20`}>
+              {STATUS_LABEL[status]}
+            </div>
 
             <div className="relative w-full rounded-xl overflow-hidden shadow-lg">
               {images.length > 0 && (
