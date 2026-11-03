@@ -1,52 +1,71 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-import Mail from 'nodemailer/lib/mailer';
+
+const MAX_NAME = 100;
+const MAX_EMAIL = 200;
+const MAX_MESSAGE = 5000;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function fail(error: string, status: number) {
+    return NextResponse.json({ ok: false, error }, { status });
+}
+
+// Odstráni zalomenia riadkov, aby sa nedali podstrčiť ďalšie hlavičky e-mailu
+function oneLine(value: string) {
+    return value.replace(/[\r\n]+/g, ' ').trim();
+}
 
 export async function POST(request: NextRequest) {
-    const { email, name, message } = await request.json();
+    let body: Record<string, unknown>;
+    try {
+        body = await request.json();
+    } catch {
+        return fail('Neplatná požiadavka.', 400);
+    }
+
+    const name = oneLine(String(body.name ?? ''));
+    const email = oneLine(String(body.email ?? ''));
+    const message = String(body.message ?? '').trim();
+    const website = String(body.website ?? '');
+
+    // Skryté pole (honeypot) – vyplnia ho len roboty. Tvárime sa, že je všetko OK.
+    if (website) {
+        return NextResponse.json({ ok: true });
+    }
+
+    if (!name || name.length > MAX_NAME) {
+        return fail('Zadajte prosím meno (max. 100 znakov).', 400);
+    }
+    if (!EMAIL_RE.test(email) || email.length > MAX_EMAIL) {
+        return fail('Zadajte prosím platný e-mail.', 400);
+    }
+    if (!message || message.length > MAX_MESSAGE) {
+        return fail('Napíšte prosím správu (max. 5000 znakov).', 400);
+    }
+
+    const user = process.env.MY_EMAIL;
+    const pass = process.env.MY_PASSWORD;
+    if (!user || !pass) {
+        console.error('Contact form: MY_EMAIL or MY_PASSWORD is not set');
+        return fail('Správu sa nepodarilo odoslať.', 500);
+    }
 
     const transport = nodemailer.createTransport({
         service: 'gmail',
-        /*
-          setting service as 'gmail' is same as providing these setings:
-
-          host: "smtp.gmail.com",
-          port: 465,
-          secure: true
-
-          If you want to use a different email provider other than gmail, you need to provide these manually.
-          Or you can go use these well known services and their settings at
-          https://github.com/nodemailer/nodemailer/blob/master/lib/well-known/services.json
-      */
-        auth: {
-            user: process.env.MY_EMAIL,
-            pass: process.env.MY_PASSWORD,
-        },
+        auth: { user, pass },
     });
 
-    const mailOptions: Mail.Options = {
-        from: process.env.MY_EMAIL,
-        to: process.env.MY_EMAIL,
-        // cc: email, (uncomment this line if you want to send a copy to the sender)
-        subject: `Message from ${name} (${email})`,
-        text: message,
-    };
-
-    const sendMailPromise = () =>
-        new Promise<string>((resolve, reject) => {
-            transport.sendMail(mailOptions, function (err) {
-                if (!err) {
-                    resolve('Email sent');
-                } else {
-                    reject(err.message);
-                }
-            });
-        });
-
     try {
-        await sendMailPromise();
-        return NextResponse.json({ message: 'Email sent' });
+        await transport.sendMail({
+            from: user,
+            to: user,
+            replyTo: email,
+            subject: `Message from ${name} (${email})`,
+            text: message,
+        });
+        return NextResponse.json({ ok: true });
     } catch (err) {
-        return NextResponse.json({ error: err });
+        console.error('Contact form: sending failed', err);
+        return fail('Správu sa nepodarilo odoslať.', 500);
     }
 }

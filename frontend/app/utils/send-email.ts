@@ -1,17 +1,16 @@
 import { FormData } from '@/components/ContactForm';
 
-export function sendEmail(data: FormData) {
-    const apiEndpoint = '/api/email';
-
-    fetch(apiEndpoint, {
+// Vráti sa až keď server potvrdí odoslanie; inak vyhodí chybu s textom pre používateľa
+export async function sendEmail(data: FormData): Promise<void> {
+    const res = await fetch('/api/email', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
-    })
-        .then((res) => res.json())
-        .then((response) => {
-            alert(response.message);
-        })
-        .catch((err) => {
-            alert(err);
-        });
+    });
+
+    const response = await res.json().catch(() => null);
+
+    if (!res.ok || !response?.ok) {
+        throw new Error(response?.error || 'Správu sa nepodarilo odoslať.');
+    }
 }

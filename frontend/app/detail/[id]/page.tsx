@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import ClientDetailPage from './client';
+import flatsData from '@/public/data/flats.json';
 
 export const dynamicParams = true;
 export const dynamic = 'force-dynamic';
@@ -13,7 +14,7 @@ type Flat = {
   poschodie: number;
   izby: number;
   rozloha: string;
-  status: 'predane' | 'volne';
+  status: string;
   images: string[];
   popis: string[];
 };
@@ -24,10 +25,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   const flatId = Number(id);
   if (isNaN(flatId)) return notFound();
 
-  const res = await fetch("https://gold-trade.sk/api/flats", { cache: "no-store" });
-  if (!res.ok) return notFound();
-
-  const flats: Flat[] = await res.json();
+  const flats = flatsData as Flat[];
   const flat = flats.find((f) => f.id === flatId);
 
   if (!flat) return notFound();
