@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/izba.js": {
-      "includeFiles": "flats.json"
-    }
-  }
-}
