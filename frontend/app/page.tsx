@@ -5,26 +5,7 @@ import FlatCatalogSlider from "@/components/FlatCatalogSlider";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import { MapPin, Building2, Handshake, Wrench, Phone, Mail, Clock, ShieldCheck, ArrowRight } from "lucide-react";
 
-
-async function getFlats() {
-  const res = await fetch('https://gold-trade.sk/api/flats?id=all', {
-    cache: 'no-store',             
-  });
-  if (!res.ok) return [];
-
-  const data = await res.json();
-
-  return (Array.isArray(data) ? data : []).map((f: any) => ({
-    ...f,
-    cenaWithDPH:    f.cenaWithDPH    ?? f.cena_with_dph    ?? '',
-    cenaWithoutDPH: f.cenaWithoutDPH ?? f.cena_without_dph ?? '',
-  }));
-}
-
-
-export default async function Home() {
-  const flats = await getFlats();
-
+export default function Home() {
   return (
     <main className="bg-[#2E2E2E] text-white min-h-screen">
       <HeroSection />

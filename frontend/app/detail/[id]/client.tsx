@@ -20,7 +20,7 @@ type Flat = {
   poschodie: number;
   izby: number;
   rozloha: string;
-  status: 'predane' | 'volne';
+  status: string;
   images: string[];
   popis: string[];
 };
